@@ -59,6 +59,13 @@ def normalize_iv(value: Any) -> float | None:
 def parse_days_label(value: Any) -> int | None:
     if value is None:
         return None
+    if isinstance(value, (int, float)):
+        return int(value)
+    text = str(value).strip().split()[0]
+    try:
+        return int(float(text))
+    except ValueError:
+        return None
 
 
 def compute_premium_put_annualized_pct(
