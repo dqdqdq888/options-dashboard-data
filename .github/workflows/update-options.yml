@@ -1,0 +1,55 @@
+name: Update options dashboard data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Hong Kong trading hours, roughly every 30 minutes on weekdays.
+    # UTC 01:30-08:30 = HK 09:30-16:30.
+    - cron: "*/30 1-8 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  update-options:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r option_report_charts/requirements-cloud.txt
+
+      - name: Generate latest option bundles
+        working-directory: option_report_charts/unified_options_bundle
+        run: |
+          python bundle_export.py --json-out latest_options_bundle.json
+          python bundle_light_export.py --input latest_options_bundle.json --output latest_options_bundle_light.json --strike-band-pct 0.15
+          python bundle_aladdin_export.py --input latest_options_bundle_light.json --output latest_options_bundle_aladdin.json --chunk-dir aladdin_chunks
+
+      - name: Publish GitHub Pages files
+        run: |
+          cp option_report_charts/unified_options_bundle/index.html index.html
+          cp option_report_charts/unified_options_bundle/latest_options_bundle_aladdin.json latest_options_bundle_aladdin.json
+          cp option_report_charts/unified_options_bundle/latest_options_bundle_light.json latest_options_bundle_light.json
+
+      - name: Commit updated dashboard data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html latest_options_bundle_aladdin.json latest_options_bundle_light.json
+          if git diff --cached --quiet; then
+            echo "No dashboard data changes to commit."
+          else
+            git commit -m "Update options dashboard data"
+            git push
+          fi
