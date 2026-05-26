@@ -103,7 +103,7 @@
 
     .meta-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(160px, 1fr));
+      grid-template-columns: repeat(2, minmax(160px, 1fr));
       gap: 12px;
       margin-top: 20px;
     }
@@ -422,14 +422,6 @@
           <div class="meta-label">最后成功刷新</div>
           <div class="meta-value" id="lastRefresh">-</div>
         </div>
-        <div class="meta-card">
-          <div class="meta-label">数据生成时间</div>
-          <div class="meta-value" id="generatedAt">-</div>
-        </div>
-        <div class="meta-card">
-          <div class="meta-label">自动刷新间隔</div>
-          <div class="meta-value">5 分钟</div>
-        </div>
       </div>
     </section>
 
@@ -550,9 +542,9 @@
     }
 
     function getDisplayContracts(asset, assetIndex) {
-      const selected = state.selectedExpiry[assetIndex] || "preview";
-      if (selected === "preview") {
-        return Array.isArray(asset.contracts_preview) ? asset.contracts_preview : [];
+      const selected = state.selectedExpiry[assetIndex] || "all";
+      if (selected === "all") {
+        return rowsToContracts(asset);
       }
       return rowsToContracts(asset).filter(contract => contract.expiry_date === selected);
     }
@@ -720,10 +712,10 @@
       const underlying = firstItem(asset.underlyings) || {};
       const source = asset.source_meta || {};
       const expiries = asset.available_expiry_dates || [];
-      const selected = state.selectedExpiry[index] || "preview";
+      const selected = state.selectedExpiry[index] || "all";
       const contracts = getDisplayContracts(asset, index);
       const expiryOptions = [
-        `<option value="preview"${selected === "preview" ? " selected" : ""}>默认重点预览</option>`,
+        `<option value="all"${selected === "all" ? " selected" : ""}>全部到期日（Put ±15%）</option>`,
         ...expiries.map(expiry => `<option value="${escapeHtml(expiry)}"${selected === expiry ? " selected" : ""}>${escapeHtml(expiry)}</option>`)
       ].join("");
 
@@ -733,7 +725,7 @@
             <div>
               <h2 class="asset-title">${escapeHtml(asset.display_name || asset.asset_code || "-")}</h2>
               <div class="asset-sub">
-                市场：${escapeHtml(asset.market || "-")}；来源：${escapeHtml(source.provider || "-")}；是否延迟：${source.delayed ? "是" : "否"}；数据时间：${escapeHtml(formatDateTime(source.retrieved_at))}
+                市场：${escapeHtml(asset.market || "-")}；来源：${escapeHtml(source.provider || "-")}；数据时间：${escapeHtml(formatDateTime(source.retrieved_at))}
               </div>
             </div>
             <div class="price">${formatNumber(underlying.last_price)}</div>
@@ -755,7 +747,6 @@
     function renderDashboard() {
       if (!state.data) return;
       const assets = state.data.assets || [];
-      document.getElementById("generatedAt").textContent = formatDateTime(state.data.meta?.generated_at_utc);
       renderSourceBar(state.data.source_statuses || []);
       renderTabs(assets);
       document.getElementById("content").innerHTML = assets.map(renderAsset).join("") || `<div class="empty">暂无资产数据</div>`;
