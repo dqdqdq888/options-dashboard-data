@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>期权 Put 收益看板</title>
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #697386;
+      --line: #e5e9f2;
+      --blue: #3157d5;
+      --green: #0f9f6e;
+      --red: #c93535;
+      --amber: #b7791f;
+      --soft-blue: #eef3ff;
+      --soft-green: #ebf8f2;
+      --shadow: 0 16px 40px rgba(19, 32, 61, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    .page {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #172033, #3157d5);
+      color: #fff;
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      letter-spacing: 0.02em;
+    }
+
+    .subtitle {
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 820px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button, select {
+      font: inherit;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      cursor: pointer;
+      color: var(--text);
+      background: #fff;
+      font-weight: 650;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .btn.secondary {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.16);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .meta-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 14px;
+      padding: 13px;
+    }
+
+    .meta-label {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.68);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 15px;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .notice {
+      display: none;
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      background: #fff5e6;
+      color: #8a5a13;
+      border: 1px solid #ffdca8;
+    }
+
+    .notice.show {
+      display: block;
+    }
+
+    .source-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 16px 0;
+    }
+
+    .source-pill {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 12px;
+      box-shadow: 0 6px 20px rgba(19, 32, 61, 0.05);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-right: 6px;
+      border-radius: 999px;
+      background: var(--amber);
+    }
+
+    .dot.ok {
+      background: var(--green);
+    }
+
+    .dot.error {
+      background: var(--red);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 12px 0 18px;
+    }
+
+    .tab {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 999px;
+      padding: 10px 16px;
+      cursor: pointer;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .tab.active {
+      color: #fff;
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .asset-card {
+      display: none;
+      background: var(--card);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .asset-card.active {
+      display: block;
+    }
+
+    .asset-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+    }
+
+    .asset-title {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .asset-sub {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--blue);
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 16px 0;
+    }
+
+    .controls select {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 9px 12px;
+      background: #fff;
+      min-width: 190px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(150px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .stat {
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 13px;
+    }
+
+    .stat .label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+
+    .stat .value {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .rank-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(240px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .rank {
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .rank h3 {
+      margin: 0;
+      padding: 12px 14px;
+      background: var(--soft-blue);
+      color: #1d3d9f;
+      font-size: 14px;
+    }
+
+    .rank-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      padding: 10px 14px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .rank-row .muted {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .rank-row strong {
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      max-height: 640px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+      background: #fff;
+    }
+
+    th, td {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: #f8fafc;
+      z-index: 2;
+      color: #3a4658;
+      font-weight: 800;
+    }
+
+    td.num, th.num {
+      text-align: right;
+    }
+
+    tr:hover td {
+      background: #fbfdff;
+    }
+
+    .empty, .loading {
+      padding: 42px;
+      text-align: center;
+      color: var(--muted);
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+      margin: 18px 2px 0;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        padding: 14px;
+      }
+
+      .meta-grid, .stats, .rank-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .asset-head {
+        display: block;
+      }
+
+      .price {
+        text-align: left;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <h1>期权 Put 收益看板</h1>
+          <div class="subtitle">
+            展示腾讯、黄金期货期权和 PDD 的 Put 合约数据。页面会自动读取 GitHub Pages 上的最新 JSON，并按到期日筛选完整明细。
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn" id="refreshBtn">立即刷新</button>
+          <button class="btn secondary" id="pauseBtn">暂停自动刷新</button>
+        </div>
+      </div>
+      <div class="meta-grid">
+        <div class="meta-card">
+          <div class="meta-label">网页刷新状态</div>
+          <div class="meta-value" id="refreshState">加载中</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">最后成功刷新</div>
+          <div class="meta-value" id="lastRefresh">-</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">数据生成时间</div>
+          <div class="meta-value" id="generatedAt">-</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">自动刷新间隔</div>
+          <div class="meta-value">5 分钟</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="notice" id="notice"></div>
+    <div class="source-bar" id="sourceBar"></div>
+    <div class="tabs" id="tabs"></div>
+    <div id="content">
+      <div class="loading">正在加载数据...</div>
+    </div>
+    <div class="footer-note">
+      提示：当前数据来自网页源或公共行情，适合展示、筛选和观察，不是交易级实时行情。请以每个数据源显示的更新时间为准。
+    </div>
+  </main>
+
+  <script>
+    const DATA_URL = "./latest_options_bundle_aladdin.json";
+    const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
+
+    const state = {
+      data: null,
+      activeAsset: 0,
+      selectedExpiry: {},
+      contractsCache: new Map(),
+      loading: false,
+      autoRefresh: true,
+      timer: null
+    };
+
+    const tableColumns = [
+      ["expiry_date", "到期日", "text"],
+      ["days_to_expiry", "剩余天数", "num"],
+      ["strike_price", "行权价", "num"],
+      ["last_price", "Last", "num"],
+      ["bid_price", "Bid", "num"],
+      ["ask_price", "Ask", "num"],
+      ["volume", "成交量", "num"],
+      ["open_interest", "未平仓", "num"],
+      ["implied_volatility", "IV", "iv"],
+      ["cash_secured_put_annualized_pct", "担保 Put 年化", "pct"],
+      ["premium", "权利金", "num"],
+      ["moneyness_bucket", "价位区间", "text"],
+      ["display_symbol", "合约", "text"]
+    ];
+
+    function escapeHtml(value) {
+      return String(value ?? "-")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function isMissing(value) {
+      return value === null || value === undefined || value === "" || Number.isNaN(value);
+    }
+
+    function asNumber(value) {
+      if (isMissing(value)) return null;
+      const number = Number(value);
+      return Number.isFinite(number) ? number : null;
+    }
+
+    function formatNumber(value, digits = 2) {
+      const number = asNumber(value);
+      if (number === null) return "-";
+      return number.toLocaleString("zh-CN", { maximumFractionDigits: digits, minimumFractionDigits: 0 });
+    }
+
+    function formatPercent(value) {
+      const number = asNumber(value);
+      if (number === null) return "-";
+      return `${number.toFixed(2)}%`;
+    }
+
+    function formatIv(value) {
+      const number = asNumber(value);
+      if (number === null) return "-";
+      const percent = Math.abs(number) <= 3 ? number * 100 : number;
+      return `${percent.toFixed(2)}%`;
+    }
+
+    function formatDateTime(value) {
+      if (!value) return "-";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return String(value);
+      return date.toLocaleString("zh-CN", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    function formatCell(value, type) {
+      if (type === "num") return formatNumber(value);
+      if (type === "pct") return formatPercent(value);
+      if (type === "iv") return formatIv(value);
+      return escapeHtml(isMissing(value) ? "-" : value);
+    }
+
+    function normalizeOptionType(value) {
+      return String(value || "").toUpperCase();
+    }
+
+    function rowsToContracts(asset) {
+      const key = asset.asset_code || asset.display_name || Math.random().toString();
+      if (state.contractsCache.has(key)) return state.contractsCache.get(key);
+      const columns = asset.contracts_columns || [];
+      const rows = asset.contracts_rows || [];
+      const contracts = rows.map(row => {
+        const item = {};
+        columns.forEach((column, index) => {
+          item[column] = row[index] ?? null;
+        });
+        return item;
+      });
+      state.contractsCache.set(key, contracts);
+      return contracts;
+    }
+
+    function getDisplayContracts(asset, assetIndex) {
+      const selected = state.selectedExpiry[assetIndex] || "preview";
+      if (selected === "preview") {
+        return Array.isArray(asset.contracts_preview) ? asset.contracts_preview : [];
+      }
+      return rowsToContracts(asset).filter(contract => contract.expiry_date === selected);
+    }
+
+    function firstItem(list) {
+      return Array.isArray(list) && list.length ? list[0] : null;
+    }
+
+    function renderSourceBar(statuses) {
+      const sourceBar = document.getElementById("sourceBar");
+      sourceBar.innerHTML = (statuses || []).map(item => {
+        const status = String(item.status || "").toLowerCase();
+        const dotClass = status === "ok" || status === "success" ? "ok" : (status === "error" ? "error" : "");
+        const text = `${item.asset_code || "-"}: ${item.provider || "-"} / ${item.status || "-"}`;
+        return `<div class="source-pill"><span class="dot ${dotClass}"></span>${escapeHtml(text)}，${escapeHtml(item.contract_count ?? 0)} 条</div>`;
+      }).join("");
+    }
+
+    function renderTabs(assets) {
+      const tabs = document.getElementById("tabs");
+      tabs.innerHTML = assets.map((asset, index) => {
+        const active = index === state.activeAsset ? "active" : "";
+        return `<button class="tab ${active}" data-asset-index="${index}">${escapeHtml(asset.display_name || asset.asset_code || `资产 ${index + 1}`)}</button>`;
+      }).join("");
+      tabs.querySelectorAll(".tab").forEach(button => {
+        button.addEventListener("click", () => {
+          state.activeAsset = Number(button.dataset.assetIndex);
+          renderDashboard();
+        });
+      });
+    }
+
+    function renderStats(asset) {
+      const summary = asset.summary || {};
+      const underlying = firstItem(asset.underlyings) || {};
+      return `
+        <div class="stats">
+          <div class="stat"><div class="label">标的价格</div><div class="value">${formatNumber(underlying.last_price)}</div></div>
+          <div class="stat"><div class="label">Put 合约数</div><div class="value">${formatNumber(summary.put_count, 0)}</div></div>
+          <div class="stat"><div class="label">到期日数量</div><div class="value">${formatNumber(summary.expiry_count, 0)}</div></div>
+          <div class="stat"><div class="label">数据源</div><div class="value">${escapeHtml(asset.source_meta?.provider || "-")}</div></div>
+        </div>
+      `;
+    }
+
+    function renderRank(title, items, valueKey, valueType) {
+      const rows = (items || []).slice(0, 5).map(item => {
+        const label = `${item.expiry_date || "-"} / K=${formatNumber(item.strike_price)}`;
+        const sub = `Last ${formatNumber(item.last_price)}，OI ${formatNumber(item.open_interest, 0)}，Vol ${formatNumber(item.volume, 0)}`;
+        const value = valueType === "pct" ? formatPercent(item[valueKey]) : formatNumber(item[valueKey], 0);
+        return `
+          <div class="rank-row">
+            <div>
+              <div>${escapeHtml(label)}</div>
+              <div class="muted">${escapeHtml(sub)}</div>
+            </div>
+            <strong>${escapeHtml(value)}</strong>
+          </div>
+        `;
+      }).join("") || `<div class="rank-row"><div>暂无数据</div><strong>-</strong></div>`;
+
+      return `<div class="rank"><h3>${escapeHtml(title)}</h3>${rows}</div>`;
+    }
+
+    function renderRanks(asset) {
+      const summary = asset.summary || {};
+      return `
+        <div class="rank-grid">
+          ${renderRank("未平仓量最高 Put", summary.top_puts_by_open_interest, "open_interest", "num")}
+          ${renderRank("成交量最高 Put", summary.top_puts_by_volume, "volume", "num")}
+          ${renderRank("年化最高 Put", summary.top_puts_by_annualized, "cash_secured_put_annualized_pct", "pct")}
+        </div>
+      `;
+    }
+
+    function renderTable(contracts) {
+      if (!contracts.length) {
+        return `<div class="empty">该到期日暂无数据</div>`;
+      }
+      const header = tableColumns.map(([, label, type]) => `<th class="${type !== "text" ? "num" : ""}">${escapeHtml(label)}</th>`).join("");
+      const body = contracts.map(contract => {
+        const cells = tableColumns.map(([key, , type]) => {
+          const value = formatCell(contract[key], type);
+          return `<td class="${type !== "text" ? "num" : ""}">${value}</td>`;
+        }).join("");
+        return `<tr>${cells}</tr>`;
+      }).join("");
+      return `<div class="table-wrap"><table><thead><tr>${header}</tr></thead><tbody>${body}</tbody></table></div>`;
+    }
+
+    function renderAsset(asset, index) {
+      const active = index === state.activeAsset ? "active" : "";
+      const underlying = firstItem(asset.underlyings) || {};
+      const source = asset.source_meta || {};
+      const expiries = asset.available_expiry_dates || [];
+      const selected = state.selectedExpiry[index] || "preview";
+      const contracts = getDisplayContracts(asset, index);
+      const expiryOptions = [
+        `<option value="preview"${selected === "preview" ? " selected" : ""}>默认重点预览</option>`,
+        ...expiries.map(expiry => `<option value="${escapeHtml(expiry)}"${selected === expiry ? " selected" : ""}>${escapeHtml(expiry)}</option>`)
+      ].join("");
+
+      return `
+        <section class="asset-card ${active}" data-asset-card="${index}">
+          <div class="asset-head">
+            <div>
+              <h2 class="asset-title">${escapeHtml(asset.display_name || asset.asset_code || "-")}</h2>
+              <div class="asset-sub">
+                市场：${escapeHtml(asset.market || "-")}；来源：${escapeHtml(source.provider || "-")}；是否延迟：${source.delayed ? "是" : "否"}；数据时间：${escapeHtml(formatDateTime(source.retrieved_at))}
+              </div>
+            </div>
+            <div class="price">${formatNumber(underlying.last_price)}</div>
+          </div>
+          ${renderStats(asset)}
+          ${renderRanks(asset)}
+          <div class="controls">
+            <label for="expiry-${index}">到期日</label>
+            <select id="expiry-${index}" data-expiry-index="${index}">${expiryOptions}</select>
+            <span class="asset-sub">当前显示 ${formatNumber(contracts.length, 0)} 条</span>
+          </div>
+          ${renderTable(contracts)}
+        </section>
+      `;
+    }
+
+    function renderDashboard() {
+      if (!state.data) return;
+      const assets = state.data.assets || [];
+      document.getElementById("generatedAt").textContent = formatDateTime(state.data.meta?.generated_at_utc);
+      renderSourceBar(state.data.source_statuses || []);
+      renderTabs(assets);
+      document.getElementById("content").innerHTML = assets.map(renderAsset).join("") || `<div class="empty">暂无资产数据</div>`;
+      document.querySelectorAll("[data-expiry-index]").forEach(select => {
+        select.addEventListener("change", event => {
+          const index = Number(event.target.dataset.expiryIndex);
+          state.selectedExpiry[index] = event.target.value;
+          renderDashboard();
+        });
+      });
+    }
+
+    function showNotice(message) {
+      const notice = document.getElementById("notice");
+      notice.textContent = message || "";
+      notice.classList.toggle("show", Boolean(message));
+    }
+
+    async function fetchData() {
+      if (state.loading) return;
+      state.loading = true;
+      document.getElementById("refreshState").textContent = "刷新中";
+      showNotice("");
+      try {
+        const url = `${DATA_URL}?t=${Date.now()}`;
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        state.data = data;
+        state.contractsCache.clear();
+        document.getElementById("lastRefresh").textContent = new Date().toLocaleString("zh-CN");
+        document.getElementById("refreshState").textContent = state.autoRefresh ? "自动刷新中" : "已暂停";
+        renderDashboard();
+      } catch (error) {
+        document.getElementById("refreshState").textContent = "刷新失败";
+        showNotice(`刷新失败，已保留上次数据。原因：${error.message}`);
+        if (!state.data) {
+          document.getElementById("content").innerHTML = `<div class="empty">数据加载失败，请确认 JSON 文件已上传到 GitHub 仓库根目录。</div>`;
+        }
+      } finally {
+        state.loading = false;
+      }
+    }
+
+    function scheduleRefresh() {
+      if (state.timer) window.clearInterval(state.timer);
+      state.timer = window.setInterval(() => {
+        if (state.autoRefresh) fetchData();
+      }, REFRESH_INTERVAL_MS);
+    }
+
+    document.getElementById("refreshBtn").addEventListener("click", fetchData);
+    document.getElementById("pauseBtn").addEventListener("click", () => {
+      state.autoRefresh = !state.autoRefresh;
+      document.getElementById("pauseBtn").textContent = state.autoRefresh ? "暂停自动刷新" : "恢复自动刷新";
+      document.getElementById("refreshState").textContent = state.autoRefresh ? "自动刷新中" : "已暂停";
+    });
+
+    fetchData();
+    scheduleRefresh();
+  </script>
+</body>
+</html>
