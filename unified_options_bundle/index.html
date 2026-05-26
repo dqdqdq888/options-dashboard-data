@@ -448,8 +448,8 @@
     };
 
     const tableColumns = [
-      ["expiry_date", "到期日", "text"],
-      ["days_to_expiry", "剩余天数", "num"],
+      ["expiry_date", "到期日", "expiry"],
+      ["days_to_expiry", "剩余天数", "days"],
       ["strike_price", "行权价", "num"],
       ["last_price", "Last", "num"],
       ["bid_price", "Bid", "num"],
@@ -514,10 +514,79 @@
       });
     }
 
+    function parseExpiryDate(value) {
+      if (!value) return null;
+      const text = String(value).trim();
+      const iso = text.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      if (iso) {
+        const date = new Date(`${iso[1]}-${iso[2]}-${iso[3]}T00:00:00Z`);
+        return Number.isNaN(date.getTime()) ? null : date;
+      }
+      const slash = text.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
+      if (slash) {
+        const month = Number(slash[1]);
+        const day = Number(slash[2]);
+        const rawYear = Number(slash[3]);
+        const year = rawYear < 100 ? 2000 + rawYear : rawYear;
+        const date = new Date(Date.UTC(year, month - 1, day));
+        return Number.isNaN(date.getTime()) ? null : date;
+      }
+      return null;
+    }
+
+    function formatExpiryDate(value) {
+      const date = parseExpiryDate(value);
+      if (!date) return escapeHtml(isMissing(value) ? "-" : value);
+      return date.toISOString().slice(0, 10);
+    }
+
+    function expirySortValue(value) {
+      const date = parseExpiryDate(value);
+      return date ? date.getTime() : Number.MAX_SAFE_INTEGER;
+    }
+
+    function calculateDaysToExpiry(contract) {
+      const expiry = parseExpiryDate(contract.expiry_date);
+      if (!expiry) return asNumber(contract.days_to_expiry);
+      const today = new Date();
+      const todayUtc = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+      const diff = Math.ceil((expiry.getTime() - todayUtc) / (24 * 60 * 60 * 1000));
+      return Math.max(diff, 0);
+    }
+
+    function contractSortValue(contract) {
+      return [
+        expirySortValue(contract.expiry_date),
+        calculateDaysToExpiry(contract) ?? Number.MAX_SAFE_INTEGER,
+        asNumber(contract.strike_price) ?? Number.MAX_SAFE_INTEGER,
+        contract.contract_symbol || ""
+      ];
+    }
+
+    function compareContracts(left, right) {
+      const leftKey = contractSortValue(left);
+      const rightKey = contractSortValue(right);
+      for (let index = 0; index < leftKey.length; index += 1) {
+        if (leftKey[index] < rightKey[index]) return -1;
+        if (leftKey[index] > rightKey[index]) return 1;
+      }
+      return 0;
+    }
+
+    function uniqueSortedExpiries(expiries) {
+      return [...new Set(expiries || [])].sort((left, right) => {
+        const diff = expirySortValue(left) - expirySortValue(right);
+        if (diff !== 0) return diff;
+        return String(left).localeCompare(String(right));
+      });
+    }
+
     function formatCell(value, type) {
       if (type === "num") return formatNumber(value);
       if (type === "pct") return formatPercent(value);
       if (type === "iv") return formatIv(value);
+      if (type === "expiry") return formatExpiryDate(value);
+      if (type === "days") return formatNumber(value, 0);
       return escapeHtml(isMissing(value) ? "-" : value);
     }
 
@@ -544,9 +613,9 @@
     function getDisplayContracts(asset, assetIndex) {
       const selected = state.selectedExpiry[assetIndex] || "all";
       if (selected === "all") {
-        return rowsToContracts(asset);
+        return [...rowsToContracts(asset)].sort(compareContracts);
       }
-      return rowsToContracts(asset).filter(contract => contract.expiry_date === selected);
+      return rowsToContracts(asset).filter(contract => contract.expiry_date === selected).sort(compareContracts);
     }
 
     function downloadFile(filename, content, mimeType) {
@@ -650,7 +719,7 @@
 
     function renderRank(title, items, valueKey, valueType) {
       const rows = (items || []).slice(0, 5).map(item => {
-        const label = `${item.expiry_date || "-"} / K=${formatNumber(item.strike_price)}`;
+        const label = `${formatExpiryDate(item.expiry_date)} / K=${formatNumber(item.strike_price)}`;
         const sub = `Last ${formatNumber(item.last_price)}，OI ${formatNumber(item.open_interest, 0)}，Vol ${formatNumber(item.volume, 0)}`;
         const value = valueType === "pct" ? formatPercent(item[valueKey]) : formatNumber(item[valueKey], 0);
         return `
@@ -699,7 +768,8 @@
       const header = tableColumns.map(([, label, type]) => `<th class="${type !== "text" ? "num" : ""}">${escapeHtml(label)}</th>`).join("");
       const body = contracts.map(contract => {
         const cells = tableColumns.map(([key, , type]) => {
-          const value = formatCell(contract[key], type);
+          const rawValue = key === "days_to_expiry" ? calculateDaysToExpiry(contract) : contract[key];
+          const value = formatCell(rawValue, type);
           return `<td class="${type !== "text" ? "num" : ""}">${value}</td>`;
         }).join("");
         return `<tr>${cells}</tr>`;
@@ -711,12 +781,12 @@
       const active = index === state.activeAsset ? "active" : "";
       const underlying = firstItem(asset.underlyings) || {};
       const source = asset.source_meta || {};
-      const expiries = asset.available_expiry_dates || [];
+      const expiries = uniqueSortedExpiries(asset.available_expiry_dates || []);
       const selected = state.selectedExpiry[index] || "all";
       const contracts = getDisplayContracts(asset, index);
       const expiryOptions = [
         `<option value="all"${selected === "all" ? " selected" : ""}>全部到期日（Put ±15%）</option>`,
-        ...expiries.map(expiry => `<option value="${escapeHtml(expiry)}"${selected === expiry ? " selected" : ""}>${escapeHtml(expiry)}</option>`)
+        ...expiries.map(expiry => `<option value="${escapeHtml(expiry)}"${selected === expiry ? " selected" : ""}>${formatExpiryDate(expiry)}</option>`)
       ].join("");
 
       return `
