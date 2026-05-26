@@ -94,6 +94,13 @@
       box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
     }
 
+    .btn.download {
+      color: var(--blue);
+      background: var(--soft-blue);
+      border: 1px solid #cdd8ff;
+      box-shadow: none;
+    }
+
     .meta-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(160px, 1fr));
@@ -668,13 +675,27 @@
       return `<div class="rank"><h3>${escapeHtml(title)}</h3>${rows}</div>`;
     }
 
-    function renderRanks(asset) {
+    function topAnnualizedItems(asset, index) {
+      const summaryItems = asset.summary?.top_puts_by_annualized || [];
+      if (summaryItems.length) return summaryItems;
+      return rowsToContracts(asset)
+        .filter(contract => normalizeOptionType(contract.option_type) === "PUT")
+        .filter(contract => asNumber(contract.cash_secured_put_annualized_pct) !== null)
+        .sort((left, right) => {
+          const annualizedDiff = asNumber(right.cash_secured_put_annualized_pct) - asNumber(left.cash_secured_put_annualized_pct);
+          if (annualizedDiff !== 0) return annualizedDiff;
+          return (asNumber(right.open_interest) || 0) - (asNumber(left.open_interest) || 0);
+        })
+        .slice(0, 5);
+    }
+
+    function renderRanks(asset, index) {
       const summary = asset.summary || {};
       return `
         <div class="rank-grid">
           ${renderRank("未平仓量最高 Put", summary.top_puts_by_open_interest, "open_interest", "num")}
           ${renderRank("成交量最高 Put", summary.top_puts_by_volume, "volume", "num")}
-          ${renderRank("年化最高 Put", summary.top_puts_by_annualized, "cash_secured_put_annualized_pct", "pct")}
+          ${renderRank("年化最高 Put", topAnnualizedItems(asset, index), "cash_secured_put_annualized_pct", "pct")}
         </div>
       `;
     }
@@ -718,13 +739,13 @@
             <div class="price">${formatNumber(underlying.last_price)}</div>
           </div>
           ${renderStats(asset)}
-          ${renderRanks(asset)}
+          ${renderRanks(asset, index)}
           <div class="controls">
             <label for="expiry-${index}">到期日</label>
             <select id="expiry-${index}" data-expiry-index="${index}">${expiryOptions}</select>
             <span class="asset-sub">当前显示 ${formatNumber(contracts.length, 0)} 条</span>
-            <button class="btn secondary" type="button" data-download-csv="${index}">下载该资产全部 CSV</button>
-            <button class="btn secondary" type="button" data-download-json="${index}">下载该资产全部 JSON</button>
+            <button class="btn download" type="button" data-download-csv="${index}">下载该资产全部 CSV</button>
+            <button class="btn download" type="button" data-download-json="${index}">下载该资产全部 JSON</button>
           </div>
           ${renderTable(contracts)}
         </section>
