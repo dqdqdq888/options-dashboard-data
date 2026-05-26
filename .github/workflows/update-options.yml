@@ -3,7 +3,12 @@ name: Update options dashboard data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 1-8 * * 1-5"
+    # Run every 15 minutes, 24 hours a day.
+    - cron: "*/15 * * * *"
+
+concurrency:
+  group: update-options-dashboard
+  cancel-in-progress: true
 
 permissions:
   contents: write
