@@ -82,13 +82,6 @@ def compute_premium_put_annualized_pct(
     if premium_value is None or strike_value in (None, 0) or days_value in (None, 0):
         return None
     return round((premium_value / strike_value) * (365.0 / days_value) * 100.0, 2)
-    if isinstance(value, (int, float)):
-        return int(value)
-    text = str(value).strip().split()[0]
-    try:
-        return int(float(text))
-    except ValueError:
-        return None
 
 
 def build_source_meta(
