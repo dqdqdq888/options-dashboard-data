@@ -3,8 +3,6 @@ name: Update options dashboard data
 on:
   workflow_dispatch:
   schedule:
-    # Hong Kong trading hours, roughly every 30 minutes on weekdays.
-    # UTC 01:30-08:30 = HK 09:30-16:30.
     - cron: "*/30 1-8 * * 1-5"
 
 permissions:
@@ -36,7 +34,7 @@ jobs:
           python bundle_light_export.py --input latest_options_bundle.json --output latest_options_bundle_light.json --strike-band-pct 0.15
           python bundle_aladdin_export.py --input latest_options_bundle_light.json --output latest_options_bundle_aladdin.json --chunk-dir aladdin_chunks
 
-            - name: Publish GitHub Pages files
+      - name: Publish GitHub Pages files
         run: |
           if [ -f option_report_charts/unified_options_bundle/index.html ]; then
             cp option_report_charts/unified_options_bundle/index.html index.html
