@@ -553,6 +553,64 @@
       return rowsToContracts(asset).filter(contract => contract.expiry_date === selected);
     }
 
+    function downloadFile(filename, content, mimeType) {
+      const blob = new Blob([content], { type: mimeType });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+    function csvValue(value) {
+      if (isMissing(value)) return "";
+      const text = String(value);
+      if (/[",\r\n]/.test(text)) {
+        return `"${text.replaceAll('"', '""')}"`;
+      }
+      return text;
+    }
+
+    function assetDownloadName(asset, suffix) {
+      const code = String(asset.asset_code || asset.display_name || "options")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "_")
+        .replace(/^_+|_+$/g, "");
+      const date = new Date().toISOString().slice(0, 10);
+      return `${code || "options"}_all_put_contracts_${date}.${suffix}`;
+    }
+
+    function downloadAssetCsv(assetIndex) {
+      const asset = state.data?.assets?.[assetIndex];
+      if (!asset) return;
+      const contracts = rowsToContracts(asset);
+      const columns = asset.contracts_columns || Object.keys(contracts[0] || {});
+      const header = columns.map(csvValue).join(",");
+      const rows = contracts.map(contract => columns.map(column => csvValue(contract[column])).join(","));
+      downloadFile(assetDownloadName(asset, "csv"), [header, ...rows].join("\r\n"), "text/csv;charset=utf-8");
+    }
+
+    function downloadAssetJson(assetIndex) {
+      const asset = state.data?.assets?.[assetIndex];
+      if (!asset) return;
+      const payload = {
+        asset_code: asset.asset_code,
+        display_name: asset.display_name,
+        source_meta: asset.source_meta,
+        underlyings: asset.underlyings,
+        available_expiry_dates: asset.available_expiry_dates,
+        contracts: rowsToContracts(asset)
+      };
+      downloadFile(
+        assetDownloadName(asset, "json"),
+        JSON.stringify(payload, null, 2),
+        "application/json;charset=utf-8"
+      );
+    }
+
     function firstItem(list) {
       return Array.isArray(list) && list.length ? list[0] : null;
     }
@@ -668,6 +726,8 @@
             <label for="expiry-${index}">到期日</label>
             <select id="expiry-${index}" data-expiry-index="${index}">${expiryOptions}</select>
             <span class="asset-sub">当前显示 ${formatNumber(contracts.length, 0)} 条</span>
+            <button class="btn secondary" type="button" data-download-csv="${index}">下载该资产全部 CSV</button>
+            <button class="btn secondary" type="button" data-download-json="${index}">下载该资产全部 JSON</button>
           </div>
           ${renderTable(contracts)}
         </section>
@@ -686,6 +746,16 @@
           const index = Number(event.target.dataset.expiryIndex);
           state.selectedExpiry[index] = event.target.value;
           renderDashboard();
+        });
+      });
+      document.querySelectorAll("[data-download-csv]").forEach(button => {
+        button.addEventListener("click", event => {
+          downloadAssetCsv(Number(event.target.dataset.downloadCsv));
+        });
+      });
+      document.querySelectorAll("[data-download-json]").forEach(button => {
+        button.addEventListener("click", event => {
+          downloadAssetJson(Number(event.target.dataset.downloadJson));
         });
       });
     }
