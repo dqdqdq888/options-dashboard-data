@@ -244,7 +244,7 @@ def fetch_tencent_quote(client: TencentHkexClient) -> tuple[float, str]:
 
 def collect_tencent_hkex_dashboard_data(timeout: int = 30, max_expiries: int = 0) -> DashboardData:
     client = TencentHkexClient(timeout=timeout)
-    spot_price, update_time = fetch_tencent_quote(client)
+    spot_price, _ = fetch_tencent_quote(client)
     expiries = fetch_available_expiries(client)
     if max_expiries > 0:
         expiries = expiries[:max_expiries]
@@ -257,6 +257,12 @@ def collect_tencent_hkex_dashboard_data(timeout: int = 30, max_expiries: int = 0
     if not table.empty:
         table["spot_price"] = spot_price
         table = table.sort_values(["expiry_date", "strike_price", "option_type"]).reset_index(drop=True)
+
+    try:
+        spot_price, _ = fetch_tencent_quote(client)
+    except Exception:
+        pass
+    update_time = now_utc_iso()
 
     return DashboardData(
         spot_price=spot_price,

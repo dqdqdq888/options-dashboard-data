@@ -102,7 +102,53 @@ def build_source_meta(
     }
 
 
-def build_summary(contracts: list[dict[str, Any]]) -> dict[str, Any]:
+def spot_prices_from_underlyings(underlyings: list[dict[str, Any]]) -> dict[str, float]:
+    prices: dict[str, float] = {}
+    for item in underlyings or []:
+        symbol = item.get("symbol")
+        price = to_float(item.get("last_price"))
+        if symbol and price is not None:
+            prices[symbol] = price
+    return prices
+
+
+def filter_puts_at_or_below_spot(
+    put_df: pd.DataFrame,
+    *,
+    spot_prices: dict[str, float] | None = None,
+    default_spot: float | None = None,
+) -> pd.DataFrame:
+    if put_df.empty:
+        return put_df
+
+    filtered = put_df
+    if "moneyness_pct" in put_df.columns and put_df["moneyness_pct"].notna().any():
+        filtered = filtered[filtered["moneyness_pct"].isna() | (filtered["moneyness_pct"] <= 0)]
+    elif spot_prices and "underlying_symbol" in filtered.columns and "strike_price" in filtered.columns:
+        def strike_at_or_below_spot(row: pd.Series) -> bool:
+            strike = row.get("strike_price")
+            if strike is None or pd.isna(strike):
+                return False
+            symbol = row.get("underlying_symbol")
+            spot = spot_prices.get(symbol) if symbol else None
+            if spot is None:
+                spot = default_spot
+            if spot is None:
+                return True
+            return float(strike) <= float(spot)
+
+        filtered = filtered[filtered.apply(strike_at_or_below_spot, axis=1)]
+    elif default_spot is not None and "strike_price" in filtered.columns:
+        filtered = filtered[filtered["strike_price"].notna() & (filtered["strike_price"] <= default_spot)]
+    return filtered
+
+
+def build_summary(
+    contracts: list[dict[str, Any]],
+    *,
+    spot_prices: dict[str, float] | None = None,
+    default_spot: float | None = None,
+) -> dict[str, Any]:
     if not contracts:
         return {
             "contract_count": 0,
@@ -170,8 +216,10 @@ def build_summary(contracts: list[dict[str, Any]]) -> dict[str, Any]:
 
     annualized_puts = []
     if "cash_secured_put_annualized_pct" in put_df.columns and put_df["cash_secured_put_annualized_pct"].notna().any():
+        eligible_puts = filter_puts_at_or_below_spot(put_df, spot_prices=spot_prices, default_spot=default_spot)
+        eligible_puts = eligible_puts[eligible_puts["cash_secured_put_annualized_pct"].notna()]
         annualized_puts = (
-            put_df.sort_values(["cash_secured_put_annualized_pct", "open_interest"], ascending=False)
+            eligible_puts.sort_values(["cash_secured_put_annualized_pct", "open_interest"], ascending=False)
             .head(8)[top_put_columns]
             .to_dict(orient="records")
         )
@@ -278,7 +326,7 @@ def normalize_gold_payload(payload: dict[str, Any]) -> dict[str, Any]:
         "underlyings": underlyings,
         "expiries": expiries,
         "contracts": contracts,
-        "summary": build_summary(contracts),
+        "summary": build_summary(contracts, spot_prices=spot_prices_from_underlyings(underlyings)),
     }
 
 
@@ -374,7 +422,10 @@ def normalize_pdd_payload(payload: dict[str, Any]) -> dict[str, Any]:
         "underlyings": underlyings,
         "expiries": expiries,
         "contracts": contracts,
-        "summary": build_summary(contracts),
+        "summary": build_summary(
+            contracts,
+            default_spot=to_float(underlyings[0].get("last_price")) if underlyings else None,
+        ),
     }
 
 
@@ -464,5 +515,5 @@ def normalize_tencent_payload(
         "underlyings": underlyings,
         "expiries": sorted(expiries, key=lambda item: item["expiry_date"]),
         "contracts": contracts,
-        "summary": build_summary(contracts),
+        "summary": build_summary(contracts, default_spot=spot_price),
     }

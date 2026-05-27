@@ -7,6 +7,8 @@ from typing import Any
 
 import pandas as pd
 
+from options_bundle_schema import filter_puts_at_or_below_spot, spot_prices_from_underlyings
+
 
 DEFAULT_INPUT = "latest_options_bundle.json"
 DEFAULT_OUTPUT = "latest_options_bundle_light.json"
@@ -151,7 +153,10 @@ def dedupe_contracts(contracts: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return list(deduped.values())
 
 
-def build_filtered_summary(filtered_contracts: list[dict[str, Any]]) -> dict[str, Any]:
+def build_filtered_summary(
+    filtered_contracts: list[dict[str, Any]],
+    underlyings: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
     if not filtered_contracts:
         return {
             "contract_count": 0,
@@ -208,8 +213,14 @@ def build_filtered_summary(filtered_contracts: list[dict[str, Any]]) -> dict[str
     top_by_oi = df.sort_values(["open_interest", "volume"], ascending=False).head(10)[top_cols].to_dict(orient="records")
     top_by_volume = df.sort_values(["volume", "open_interest"], ascending=False).head(10)[top_cols].to_dict(orient="records")
     annualized_available = "cash_secured_put_annualized_pct" in df.columns and df["cash_secured_put_annualized_pct"].notna().any()
+    spot_prices = spot_prices_from_underlyings(underlyings or [])
+    default_spot = next(iter(spot_prices.values()), None) if len(spot_prices) == 1 else None
+    eligible_puts = filter_puts_at_or_below_spot(df, spot_prices=spot_prices, default_spot=default_spot)
     top_by_annualized = (
-        df.sort_values(["cash_secured_put_annualized_pct", "open_interest"], ascending=False).head(10)[top_cols].to_dict(orient="records")
+        eligible_puts[eligible_puts["cash_secured_put_annualized_pct"].notna()]
+        .sort_values(["cash_secured_put_annualized_pct", "open_interest"], ascending=False)
+        .head(10)[top_cols]
+        .to_dict(orient="records")
         if annualized_available
         else []
     )
@@ -249,7 +260,7 @@ def slim_asset(asset: dict[str, Any], max_expiries: int, max_preview_contracts: 
         "underlyings": asset.get("underlyings") or [],
         "expiries": filtered_expiries,
         "available_expiry_dates": [item.get("expiry_date") for item in filtered_expiries],
-        "summary": build_filtered_summary(filtered_contracts),
+        "summary": build_filtered_summary(filtered_contracts, asset.get("underlyings")),
         "contracts": [pick_contract_fields(contract) for contract in sorted(filtered_contracts, key=contract_priority, reverse=True)],
         "contracts_preview": build_preview_contracts(filtered_contracts, max_preview_contracts),
         "preview_note": (

@@ -736,11 +736,34 @@
       return `<div class="rank"><h3>${escapeHtml(title)}</h3>${rows}</div>`;
     }
 
+    function underlyingPriceMap(asset) {
+      const map = {};
+      for (const item of asset.underlyings || []) {
+        const symbol = item.symbol;
+        const price = asNumber(item.last_price);
+        if (symbol && price !== null) {
+          map[symbol] = price;
+        }
+      }
+      return map;
+    }
+
+    function isPutAtOrBelowSpot(contract, asset) {
+      const strike = asNumber(contract.strike_price);
+      if (strike === null) return false;
+      const priceMap = underlyingPriceMap(asset);
+      const underlying = contract.underlying_symbol;
+      const spot = (underlying && priceMap[underlying] !== undefined)
+        ? priceMap[underlying]
+        : asNumber(firstItem(asset.underlyings)?.last_price);
+      if (spot === null) return true;
+      return strike <= spot;
+    }
+
     function topAnnualizedItems(asset, index) {
-      const summaryItems = asset.summary?.top_puts_by_annualized || [];
-      if (summaryItems.length) return summaryItems;
       return rowsToContracts(asset)
         .filter(contract => normalizeOptionType(contract.option_type) === "PUT")
+        .filter(contract => isPutAtOrBelowSpot(contract, asset))
         .filter(contract => asNumber(contract.cash_secured_put_annualized_pct) !== null)
         .sort((left, right) => {
           const annualizedDiff = asNumber(right.cash_secured_put_annualized_pct) - asNumber(left.cash_secured_put_annualized_pct);
