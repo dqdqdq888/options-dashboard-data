@@ -18,7 +18,7 @@ import requests
 
 
 BASE_URL = "https://www.barchart.com"
-DEFAULT_START_URL = f"{BASE_URL}/futures/quotes/GCM26/options"
+DEFAULT_START_URL = f"{BASE_URL}/futures/quotes/GC*0/options"
 QUOTE_API_URL = f"{BASE_URL}/proxies/core-api/v1/quotes/get"
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -177,11 +177,14 @@ def parse_page(html: str, url: str) -> tuple[OptionPage, list[SelectOption], lis
     )
     futures_match = re.search(r"/futures/quotes/([^/]+)/options", urlparse(url).path)
     futures_symbol = futures_match.group(1) if futures_match else ""
+    api_symbol = str(api_params.get("symbol", ""))
+    if futures_symbol == "GC*0" and api_symbol:
+        futures_symbol = api_symbol
 
     page = OptionPage(
         url=url,
         futures_symbol=futures_symbol,
-        api_symbol=str(api_params.get("symbol", "")),
+        api_symbol=api_symbol,
         option_type_label=selected_type.label if selected_type else "",
         month_label=selected_month.label if selected_month else "",
         expiration_days=expiry_parts[0] if expiry_parts else None,
@@ -239,6 +242,7 @@ def flatten_option_rows(page: OptionPage, payload: dict[str, Any], puts_only: bo
 def discover_pages(client: BarchartClient, start_url: str, max_pages: int = 0) -> list[OptionPage]:
     queue = deque([start_url])
     seen: set[str] = set()
+    seen_api_symbols: set[str] = set()
     pages: list[OptionPage] = []
 
     while queue:
@@ -256,6 +260,9 @@ def discover_pages(client: BarchartClient, start_url: str, max_pages: int = 0) -
             if "No options were found" in html or "There is no option data" in html:
                 continue
             raise
+        if page.api_symbol in seen_api_symbols:
+            continue
+        seen_api_symbols.add(page.api_symbol)
         pages.append(page)
 
         for option in [*type_options, *month_options]:
