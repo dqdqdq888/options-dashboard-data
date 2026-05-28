@@ -239,7 +239,16 @@ def build_summary(
 
 def normalize_gold_payload(payload: dict[str, Any]) -> dict[str, Any]:
     underlyings = []
-    for symbol, quote in sorted((payload.get("underlyings") or {}).items()):
+    def gold_underlying_priority(item: tuple[str, dict[str, Any] | None]) -> tuple[float, float, str]:
+        symbol, quote = item
+        quote = quote or {}
+        return (
+            -(to_float(quote.get("volume")) or 0),
+            -(to_float(quote.get("open_interest")) or 0),
+            symbol,
+        )
+
+    for symbol, quote in sorted((payload.get("underlyings") or {}).items(), key=gold_underlying_priority):
         quote = quote or {}
         underlyings.append(
             {

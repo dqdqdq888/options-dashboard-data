@@ -706,7 +706,7 @@
 
     function renderStats(asset) {
       const summary = asset.summary || {};
-      const underlying = firstItem(asset.underlyings) || {};
+      const underlying = displayUnderlying(asset) || {};
       return `
         <div class="stats">
           <div class="stat"><div class="label">标的价格</div><div class="value">${formatNumber(underlying.last_price)}</div></div>
@@ -748,6 +748,28 @@
       return map;
     }
 
+    function displayUnderlying(asset) {
+      const underlyings = asset.underlyings || [];
+      if (underlyings.length <= 1) return firstItem(underlyings) || {};
+
+      const contractCounts = {};
+      for (const contract of rowsToContracts(asset)) {
+        const symbol = contract.underlying_symbol;
+        if (symbol) {
+          contractCounts[symbol] = (contractCounts[symbol] || 0) + 1;
+        }
+      }
+
+      return [...underlyings].sort((left, right) => {
+        const leftCount = contractCounts[left.symbol] || 0;
+        const rightCount = contractCounts[right.symbol] || 0;
+        if (rightCount !== leftCount) return rightCount - leftCount;
+        const volumeDiff = (asNumber(right.volume) || 0) - (asNumber(left.volume) || 0);
+        if (volumeDiff !== 0) return volumeDiff;
+        return (asNumber(right.open_interest) || 0) - (asNumber(left.open_interest) || 0);
+      })[0] || {};
+    }
+
     function isPutAtOrBelowSpot(contract, asset) {
       const strike = asNumber(contract.strike_price);
       if (strike === null) return false;
@@ -755,7 +777,7 @@
       const underlying = contract.underlying_symbol;
       const spot = (underlying && priceMap[underlying] !== undefined)
         ? priceMap[underlying]
-        : asNumber(firstItem(asset.underlyings)?.last_price);
+        : asNumber(displayUnderlying(asset)?.last_price);
       if (spot === null) return true;
       return strike <= spot;
     }
@@ -802,7 +824,7 @@
 
     function renderAsset(asset, index) {
       const active = index === state.activeAsset ? "active" : "";
-      const underlying = firstItem(asset.underlyings) || {};
+      const underlying = displayUnderlying(asset) || {};
       const source = asset.source_meta || {};
       const expiries = uniqueSortedExpiries(asset.available_expiry_dates || []);
       const selected = state.selectedExpiry[index] || "all";
