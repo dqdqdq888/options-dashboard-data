@@ -3,12 +3,13 @@ name: Update options dashboard data
 on:
   workflow_dispatch:
   schedule:
-    # Run every 15 minutes, 24 hours a day.
-    - cron: "*/15 * * * *"
+    # GitHub 允许的最短间隔是 5 分钟；单次抓取约 6 分钟，用 10 分钟避免任务堆积。
+    - cron: "*/10 * * * *"
 
 concurrency:
   group: update-options-dashboard
-  cancel-in-progress: true
+  # 改为排队，避免新任务取消正在抓取中的旧任务（之前会导致大量运行被跳过）。
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -56,7 +57,16 @@ jobs:
           git add index.html latest_options_bundle_aladdin.json latest_options_bundle_light.json
           if git diff --cached --quiet; then
             echo "No dashboard data changes to commit."
-          else
-            git commit -m "Update options dashboard data"
-            git push
+            exit 0
           fi
+          git commit -m "Update options dashboard data"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then
+              echo "Dashboard data pushed on attempt ${attempt}."
+              exit 0
+            fi
+            echo "Push failed on attempt ${attempt}, retrying..."
+            sleep 5
+          done
+          echo "Failed to push dashboard data after 3 attempts."
+          exit 1
