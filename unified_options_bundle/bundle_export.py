@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from copy import deepcopy
 import sys
 from pathlib import Path
 from typing import Any
@@ -51,6 +52,15 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def load_json_if_exists(path: Path) -> dict[str, Any] | None:
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
 def success_status(asset: dict[str, Any]) -> dict[str, Any]:
     return {
         "asset_code": asset["asset_code"],
@@ -73,6 +83,38 @@ def error_status(asset_code: str, provider: str, message: str) -> dict[str, Any]
     }
 
 
+def stale_status(asset: dict[str, Any], provider: str, message: str) -> dict[str, Any]:
+    return {
+        "asset_code": asset["asset_code"],
+        "status": "stale",
+        "message": message,
+        "retrieved_at": asset.get("source_meta", {}).get("retrieved_at"),
+        "contract_count": len(asset.get("contracts") or []),
+        "provider": provider,
+    }
+
+
+def stale_asset(previous_asset: dict[str, Any], message: str) -> dict[str, Any]:
+    asset = deepcopy(previous_asset)
+    source_meta = dict(asset.get("source_meta") or {})
+    source_meta["status"] = "stale"
+    notes = list(source_meta.get("notes") or [])
+    notes.append(f"本次更新失败，暂时保留上次成功抓取结果。失败原因: {message}")
+    source_meta["notes"] = notes
+    asset["source_meta"] = source_meta
+    return asset
+
+
+def previous_asset_map(bundle: dict[str, Any] | None) -> dict[str, dict[str, Any]]:
+    if not bundle:
+        return {}
+    return {
+        str(asset.get("asset_code")): asset
+        for asset in (bundle.get("assets") or [])
+        if asset.get("asset_code")
+    }
+
+
 def fetch_tencent_asset(cost_basis: float, expected_price: float, timeout: int, max_expiries: int) -> dict[str, Any]:
     dashboard = collect_tencent_hkex_dashboard_data(timeout=timeout, max_expiries=max_expiries)
     resolved_cost_basis = cost_basis if cost_basis > 0 else dashboard.spot_price
@@ -88,6 +130,9 @@ def fetch_tencent_asset(cost_basis: float, expected_price: float, timeout: int, 
 
 def main() -> int:
     args = parse_args()
+    output_path = Path(args.json_out)
+    previous_bundle = load_json_if_exists(output_path)
+    previous_assets = previous_asset_map(previous_bundle)
     assets: list[dict[str, Any]] = []
     source_statuses: list[dict[str, Any]] = []
 
@@ -102,7 +147,13 @@ def main() -> int:
             assets.append(asset)
             source_statuses.append(success_status(asset))
         except Exception as exc:
-            source_statuses.append(error_status("TENCENT", "HKEX", str(exc)))
+            previous_asset = previous_assets.get("TENCENT")
+            if previous_asset:
+                asset = stale_asset(previous_asset, str(exc))
+                assets.append(asset)
+                source_statuses.append(stale_status(asset, "HKEX", str(exc)))
+            else:
+                source_statuses.append(error_status("TENCENT", "HKEX", str(exc)))
 
     if not args.skip_gold:
         try:
@@ -115,7 +166,13 @@ def main() -> int:
             assets.append(asset)
             source_statuses.append(success_status(asset))
         except Exception as exc:
-            source_statuses.append(error_status("GC", "Barchart", str(exc)))
+            previous_asset = previous_assets.get("GC")
+            if previous_asset:
+                asset = stale_asset(previous_asset, str(exc))
+                assets.append(asset)
+                source_statuses.append(stale_status(asset, "Barchart", str(exc)))
+            else:
+                source_statuses.append(error_status("GC", "Barchart", str(exc)))
 
     if not args.skip_pdd:
         try:
@@ -128,7 +185,13 @@ def main() -> int:
             assets.append(asset)
             source_statuses.append(success_status(asset))
         except Exception as exc:
-            source_statuses.append(error_status("PDD", "Barchart", str(exc)))
+            previous_asset = previous_assets.get("PDD")
+            if previous_asset:
+                asset = stale_asset(previous_asset, str(exc))
+                assets.append(asset)
+                source_statuses.append(stale_status(asset, "Barchart", str(exc)))
+            else:
+                source_statuses.append(error_status("PDD", "Barchart", str(exc)))
 
     bundle = {
         "meta": {
@@ -146,7 +209,7 @@ def main() -> int:
         "assets": assets,
     }
 
-    write_json(Path(args.json_out), bundle)
+    write_json(output_path, bundle)
     print(f"已输出统一 JSON 到 {args.json_out}")
     for item in source_statuses:
         print(f"{item['asset_code']}: {item['status']} ({item['contract_count']} 条)")

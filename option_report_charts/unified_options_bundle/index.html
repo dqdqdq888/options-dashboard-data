@@ -648,14 +648,21 @@
       return `${code || "options"}_all_put_contracts_${date}.${suffix}`;
     }
 
+    function exportContracts(asset) {
+      return rowsToContracts(asset).map(contract => ({
+        ...contract,
+        days_to_expiry: calculateDaysToExpiry(contract)
+      }));
+    }
+
     function downloadAssetCsv(assetIndex) {
       const asset = state.data?.assets?.[assetIndex];
       if (!asset) return;
-      const contracts = rowsToContracts(asset);
+      const contracts = exportContracts(asset);
       const columns = asset.contracts_columns || Object.keys(contracts[0] || {});
       const header = columns.map(csvValue).join(",");
       const rows = contracts.map(contract => columns.map(column => csvValue(contract[column])).join(","));
-      downloadFile(assetDownloadName(asset, "csv"), [header, ...rows].join("\r\n"), "text/csv;charset=utf-8");
+      downloadFile(assetDownloadName(asset, "csv"), `\ufeff${[header, ...rows].join("\r\n")}`, "text/csv;charset=utf-8");
     }
 
     function downloadAssetJson(assetIndex) {
@@ -667,7 +674,7 @@
         source_meta: asset.source_meta,
         underlyings: asset.underlyings,
         available_expiry_dates: asset.available_expiry_dates,
-        contracts: rowsToContracts(asset)
+        contracts: exportContracts(asset)
       };
       downloadFile(
         assetDownloadName(asset, "json"),

@@ -15,6 +15,7 @@ from typing import Any
 from urllib.parse import unquote, urljoin, urlparse
 
 import requests
+from requests import RequestException
 
 
 BASE_URL = "https://www.barchart.com"
@@ -71,13 +72,17 @@ class BarchartClient:
             elapsed = time.monotonic() - self._last_request_at
             if elapsed < self.min_interval_seconds:
                 time.sleep(self.min_interval_seconds - elapsed)
-            response = self.session.get(url, timeout=self.timeout, **kwargs)
-            self._last_request_at = time.monotonic()
-            if response.status_code != 429:
-                response.raise_for_status()
-                return response
-            if attempt >= self.max_retries:
-                response.raise_for_status()
+            try:
+                response = self.session.get(url, timeout=self.timeout, **kwargs)
+                self._last_request_at = time.monotonic()
+                if response.status_code != 429:
+                    response.raise_for_status()
+                    return response
+                if attempt >= self.max_retries:
+                    response.raise_for_status()
+            except RequestException:
+                if attempt >= self.max_retries:
+                    raise
             time.sleep((attempt + 1) * 2.0)
         raise RuntimeError("Barchart 请求重试失败")
 
