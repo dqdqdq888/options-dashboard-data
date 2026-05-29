@@ -2,9 +2,6 @@ name: Update options dashboard data
 
 on:
   workflow_dispatch:
-  schedule:
-    # 每 10 分钟执行一次。避开整点/10 分钟边界，减少 GitHub schedule 高峰期延迟或丢触发。
-    - cron: "2,12,22,32,42,52 * * * *"
 
 concurrency:
   group: update-options-dashboard
@@ -36,7 +33,7 @@ jobs:
       - name: Generate latest option bundles
         working-directory: option_report_charts/unified_options_bundle
         run: |
-          python bundle_export.py --json-out latest_options_bundle.json
+          python bundle_export.py --json-out latest_options_bundle.json --timeout 60
           python bundle_light_export.py --input latest_options_bundle.json --output latest_options_bundle_light.json --strike-band-pct 0.15
           python bundle_aladdin_export.py --input latest_options_bundle_light.json --output latest_options_bundle_aladdin.json --chunk-dir aladdin_chunks
 
@@ -64,6 +61,15 @@ jobs:
             if git pull --rebase origin main && git push; then
               echo "Dashboard data pushed on attempt ${attempt}."
               exit 0
+            fi
+            if [ -d .git/rebase-merge ] || [ -d .git/rebase-apply ]; then
+              git checkout --theirs index.html latest_options_bundle_aladdin.json latest_options_bundle_light.json
+              git add index.html latest_options_bundle_aladdin.json latest_options_bundle_light.json
+              GIT_EDITOR=true git rebase --continue || git rebase --abort
+              if git push; then
+                echo "Dashboard data pushed after conflict resolution on attempt ${attempt}."
+                exit 0
+              fi
             fi
             echo "Push failed on attempt ${attempt}, retrying..."
             sleep 5
