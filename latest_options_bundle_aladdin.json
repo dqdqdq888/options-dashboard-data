@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at_utc": "2026-10-10T19:10:46.091027+00:00",
+    "generated_at_utc": "2026-10-10T19:20:37.183076+00:00",
     "bundle_version": 1,
-    "asset_count": 1,
-    "successful_source_count": 1,
-    "failed_source_count": 2,
+    "asset_count": 0,
+    "successful_source_count": 0,
+    "failed_source_count": 3,
     "notes": [
       "不同来源的数据实时性不同，请以各 asset.source_meta.delayed 与 retrieved_at 为准。",
       "网页源字段可能是延迟或混合时点快照，更适合展示、筛选和原型。"
@@ -25,9 +25,9 @@
   "source_statuses": [
     {
       "asset_code": "TENCENT",
-      "status": "ok",
-      "message": "",
-      "retrieved_at": "2026-10-10T19:10:45.170060+00:00",
+      "status": "error",
+      "message": "500 Server Error: Internal Server Error for url: https://www.hkex.com.hk/eng/sorc/options/stock_options_search.aspx",
+      "retrieved_at": null,
       "contract_count": 0,
       "provider": "HKEX"
     },
@@ -48,57 +48,5 @@
       "provider": "Barchart"
     }
   ],
-  "assets": [
-    {
-      "asset_code": "TENCENT",
-      "display_name": "Tencent Options",
-      "market": "HKEX",
-      "asset_class": "equity_options",
-      "source_meta": {
-        "provider": "HKEX",
-        "source_type": "website_scrape",
-        "delayed": true,
-        "status": "ok",
-        "retrieved_at": "2026-10-10T19:10:45.170060+00:00",
-        "notes": [
-          "腾讯港股期权链来自 HKEX 公共网页，腾讯现价来自 Yahoo Finance 公共行情。"
-        ]
-      },
-      "underlyings": [
-        {
-          "symbol": "HK.00700",
-          "display_name": "Tencent Holdings",
-          "market": "HKEX",
-          "asset_class": "equity",
-          "last_price": 424.8,
-          "bid_price": null,
-          "ask_price": null,
-          "price_change": null,
-          "percent_change": null,
-          "volume": null,
-          "open_interest": null,
-          "trade_time": "2026-10-10T19:10:45.170060+00:00",
-          "trade_time_epoch": null
-        }
-      ],
-      "expiries": [],
-      "available_expiry_dates": [],
-      "summary": {
-        "contract_count": 0,
-        "put_count": 0,
-        "call_count": 0,
-        "expiry_count": 0,
-        "underlying_count": 0,
-        "top_expiries_by_open_interest": [],
-        "top_puts_by_open_interest": [],
-        "top_puts_by_volume": [],
-        "top_puts_by_annualized": []
-      },
-      "contracts": [],
-      "contracts_preview": [],
-      "preview_note": "仅保留 Put，且行权价限制在现价上下 15% 区间内；contracts 为筛选后的完整合约集，contracts_preview 为前 180 条高优先级预览。",
-      "contracts_columns": [],
-      "contracts_rows": []
-    }
-  ]
+  "assets": []
 }
