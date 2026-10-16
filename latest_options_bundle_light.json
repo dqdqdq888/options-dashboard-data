@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at_utc": "2026-10-16T00:57:55.592440+00:00",
+    "generated_at_utc": "2026-10-16T01:07:19.075887+00:00",
     "bundle_version": 1,
     "asset_count": 1,
     "successful_source_count": 1,
@@ -25,8 +25,8 @@
       "asset_code": "TENCENT",
       "status": "ok",
       "message": "",
-      "retrieved_at": "2026-10-16T00:57:54.614615+00:00",
-      "contract_count": 1128,
+      "retrieved_at": "2026-10-16T01:07:18.028989+00:00",
+      "contract_count": 992,
       "provider": "HKEX"
     },
     {
@@ -57,7 +57,7 @@
         "source_type": "website_scrape",
         "delayed": true,
         "status": "ok",
-        "retrieved_at": "2026-10-16T00:57:54.614615+00:00",
+        "retrieved_at": "2026-10-16T01:07:18.028989+00:00",
         "notes": [
           "腾讯港股期权链来自 HKEX 公共网页，腾讯现价来自 Yahoo Finance 公共行情。"
         ]
@@ -75,7 +75,7 @@
           "percent_change": null,
           "volume": null,
           "open_interest": null,
-          "trade_time": "2026-10-16T00:57:54.614615+00:00",
+          "trade_time": "2026-10-16T01:07:18.028989+00:00",
           "trade_time_epoch": null
         }
       ],
@@ -137,15 +137,6 @@
         {
           "underlying_symbol": "HK.00700",
           "chain_symbol": "HK.00700",
-          "label": "2027-03-30",
-          "chain_type": "stock_options",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "page_url": null
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "chain_symbol": "HK.00700",
           "label": "2027-06-29",
           "chain_type": "stock_options",
           "expiry_date": "2027-06-29",
@@ -169,15 +160,14 @@
         "2026-11-27",
         "2026-12-30",
         "2027-01-28",
-        "2027-03-30",
         "2027-06-29",
         "2027-09-29"
       ],
       "summary": {
-        "contract_count": 137,
-        "put_count": 137,
+        "contract_count": 128,
+        "put_count": 128,
         "call_count": 0,
-        "expiry_count": 9,
+        "expiry_count": 8,
         "underlying_count": 1,
         "top_expiries_by_open_interest": [
           {
@@ -195,13 +185,6 @@
             "contract_count": 13
           },
           {
-            "expiry_date": "2027-03-30",
-            "total_open_interest": 142519,
-            "total_volume": 4502,
-            "avg_iv": 0.28701818181818184,
-            "contract_count": 13
-          },
-          {
             "expiry_date": "2026-11-27",
             "total_open_interest": 81740,
             "total_volume": 5774,
@@ -216,18 +199,18 @@
             "contract_count": 13
           },
           {
+            "expiry_date": "2027-09-29",
+            "total_open_interest": 23654,
+            "total_volume": 241,
+            "avg_iv": 0.29559090909090907,
+            "contract_count": 13
+          },
+          {
             "expiry_date": "2027-01-28",
             "total_open_interest": 21815,
             "total_volume": 2090,
             "avg_iv": 0.2839,
             "contract_count": 13
-          },
-          {
-            "expiry_date": "2027-09-29",
-            "total_open_interest": 19816,
-            "total_volume": 170,
-            "avg_iv": 0.29741428571428574,
-            "contract_count": 9
           },
           {
             "expiry_date": "2026-10-16",
@@ -285,19 +268,6 @@
             "cash_secured_put_annualized_pct": 15.48
           },
           {
-            "contract_symbol": "HK.TCH270330P410000",
-            "underlying_symbol": "HK.00700",
-            "expiry_date": "2027-03-30",
-            "strike_price": 410.0,
-            "last_price": 25.6,
-            "bid_price": 0.0,
-            "ask_price": 0.0,
-            "volume": 1416,
-            "open_interest": 28925,
-            "implied_volatility": 0.2866,
-            "cash_secured_put_annualized_pct": 13.81
-          },
-          {
             "contract_symbol": "HK.TCH261230P430000",
             "underlying_symbol": "HK.00700",
             "expiry_date": "2026-12-30",
@@ -309,19 +279,6 @@
             "open_interest": 25676,
             "implied_volatility": 0.2849,
             "cash_secured_put_annualized_pct": 17.09
-          },
-          {
-            "contract_symbol": "HK.TCH270330P400000",
-            "underlying_symbol": "HK.00700",
-            "expiry_date": "2027-03-30",
-            "strike_price": 400.0,
-            "last_price": 21.12,
-            "bid_price": 0.0,
-            "ask_price": 0.0,
-            "volume": 1534,
-            "open_interest": 24413,
-            "implied_volatility": 0.2868,
-            "cash_secured_put_annualized_pct": 11.68
           },
           {
             "contract_symbol": "HK.TCH261029P400000",
@@ -363,17 +320,43 @@
             "cash_secured_put_annualized_pct": 14.16
           },
           {
-            "contract_symbol": "HK.TCH270330P420000",
+            "contract_symbol": "HK.TCH261230P380000",
             "underlying_symbol": "HK.00700",
-            "expiry_date": "2027-03-30",
-            "strike_price": 420.0,
-            "last_price": 30.5,
+            "expiry_date": "2026-12-30",
+            "strike_price": 380.0,
+            "last_price": 6.9,
             "bid_price": 0.0,
             "ask_price": 0.0,
-            "volume": 1012,
-            "open_interest": 16750,
-            "implied_volatility": 0.2871,
-            "cash_secured_put_annualized_pct": 14.91
+            "volume": 205,
+            "open_interest": 16113,
+            "implied_volatility": 0.2912,
+            "cash_secured_put_annualized_pct": 8.84
+          },
+          {
+            "contract_symbol": "HK.TCH261230P420000",
+            "underlying_symbol": "HK.00700",
+            "expiry_date": "2026-12-30",
+            "strike_price": 420.0,
+            "last_price": 21.27,
+            "bid_price": 0.0,
+            "ask_price": 0.0,
+            "volume": 535,
+            "open_interest": 16094,
+            "implied_volatility": 0.2799,
+            "cash_secured_put_annualized_pct": 22.1
+          },
+          {
+            "contract_symbol": "HK.TCH261230P410000",
+            "underlying_symbol": "HK.00700",
+            "expiry_date": "2026-12-30",
+            "strike_price": 410.0,
+            "last_price": 16.5,
+            "bid_price": 0.0,
+            "ask_price": 0.0,
+            "volume": 416,
+            "open_interest": 15441,
+            "implied_volatility": 0.2801,
+            "cash_secured_put_annualized_pct": 19.59
           }
         ],
         "top_puts_by_volume": [
@@ -443,32 +426,6 @@
             "cash_secured_put_annualized_pct": 35.95
           },
           {
-            "contract_symbol": "HK.TCH270330P400000",
-            "underlying_symbol": "HK.00700",
-            "expiry_date": "2027-03-30",
-            "strike_price": 400.0,
-            "last_price": 21.12,
-            "bid_price": 0.0,
-            "ask_price": 0.0,
-            "volume": 1534,
-            "open_interest": 24413,
-            "implied_volatility": 0.2868,
-            "cash_secured_put_annualized_pct": 11.68
-          },
-          {
-            "contract_symbol": "HK.TCH270330P410000",
-            "underlying_symbol": "HK.00700",
-            "expiry_date": "2027-03-30",
-            "strike_price": 410.0,
-            "last_price": 25.6,
-            "bid_price": 0.0,
-            "ask_price": 0.0,
-            "volume": 1416,
-            "open_interest": 28925,
-            "implied_volatility": 0.2866,
-            "cash_secured_put_annualized_pct": 13.81
-          },
-          {
             "contract_symbol": "HK.TCH261023P420000",
             "underlying_symbol": "HK.00700",
             "expiry_date": "2026-10-23",
@@ -506,6 +463,32 @@
             "open_interest": 14027,
             "implied_volatility": 0.2978,
             "cash_secured_put_annualized_pct": 9.5
+          },
+          {
+            "contract_symbol": "HK.TCH261029P440000",
+            "underlying_symbol": "HK.00700",
+            "expiry_date": "2026-10-29",
+            "strike_price": 440.0,
+            "last_price": 24.8,
+            "bid_price": 0.0,
+            "ask_price": 0.0,
+            "volume": 1090,
+            "open_interest": 9935,
+            "implied_volatility": 0.3125,
+            "cash_secured_put_annualized_pct": 16.59
+          },
+          {
+            "contract_symbol": "HK.TCH261023P410000",
+            "underlying_symbol": "HK.00700",
+            "expiry_date": "2026-10-23",
+            "strike_price": 410.0,
+            "last_price": 3.28,
+            "bid_price": 0.0,
+            "ask_price": 0.0,
+            "volume": 918,
+            "open_interest": 378,
+            "implied_volatility": 0.2657,
+            "cash_secured_put_annualized_pct": 41.71
           }
         ],
         "top_puts_by_annualized": [
@@ -663,7 +646,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 29.64,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -687,7 +670,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 52.68,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -711,31 +694,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 15.48,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P410000",
-          "display_symbol": "腾讯 270330 410.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 410.0,
-          "last_price": 25.6,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 1416,
-          "open_interest": 28925,
-          "implied_volatility": 0.2866,
-          "delta": null,
-          "premium": 25.6,
-          "moneyness_pct": -0.018669219722355246,
-          "moneyness_bucket": "-5%~+5%",
-          "cash_secured_put_annualized_pct": 13.81,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -759,31 +718,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 17.09,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P400000",
-          "display_symbol": "腾讯 270330 400.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 400.0,
-          "last_price": 21.12,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 1534,
-          "open_interest": 24413,
-          "implied_volatility": 0.2868,
-          "delta": null,
-          "premium": 21.12,
-          "moneyness_pct": -0.04260411680229781,
-          "moneyness_bucket": "-5%~+5%",
-          "cash_secured_put_annualized_pct": 11.68,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -807,7 +742,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 18.6,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -831,7 +766,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 9.03,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -855,31 +790,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 14.16,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P420000",
-          "display_symbol": "腾讯 270330 420.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 420.0,
-          "last_price": 30.5,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 1012,
-          "open_interest": 16750,
-          "implied_volatility": 0.2871,
-          "delta": null,
-          "premium": 30.5,
-          "moneyness_pct": 0.005265677357587428,
-          "moneyness_bucket": "-5%~+5%",
-          "cash_secured_put_annualized_pct": 14.91,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -903,7 +814,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.84,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -927,7 +838,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 22.1,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -951,7 +862,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 19.59,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -975,7 +886,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 35.95,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -999,7 +910,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 9.5,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1023,7 +934,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 18.58,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1047,7 +958,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 6.64,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1071,7 +982,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 11.64,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1095,7 +1006,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 16.59,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1119,31 +1030,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 26.41,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P360000",
-          "display_symbol": "腾讯 270330 360.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 360.0,
-          "last_price": 9.2,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 258,
-          "open_interest": 8982,
-          "implied_volatility": 0.2984,
-          "delta": null,
-          "premium": 9.2,
-          "moneyness_pct": -0.13834370512206795,
-          "moneyness_bucket": "-20%~-10%",
-          "cash_secured_put_annualized_pct": 5.65,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1167,7 +1054,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 15.06,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1191,55 +1078,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.78,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P380000",
-          "display_symbol": "腾讯 270330 380.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 380.0,
-          "last_price": 14.4,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 87,
-          "open_interest": 7949,
-          "implied_volatility": 0.29359999999999997,
-          "delta": null,
-          "premium": 14.4,
-          "moneyness_pct": -0.09047391096218294,
-          "moneyness_bucket": "-10%~-5%",
-          "cash_secured_put_annualized_pct": 8.38,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P430000",
-          "display_symbol": "腾讯 270330 430.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 430.0,
-          "last_price": 34.31,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 83,
-          "open_interest": 7887,
-          "implied_volatility": 0.2709,
-          "delta": null,
-          "premium": 34.31,
-          "moneyness_pct": 0.02920057443752988,
-          "moneyness_bucket": "-5%~+5%",
-          "cash_secured_put_annualized_pct": 11.37,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1263,55 +1102,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -4.99,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P480000",
-          "display_symbol": "腾讯 270330 480.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 480.0,
-          "last_price": 68.8,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 2,
-          "open_interest": 7841,
-          "implied_volatility": 0.2701,
-          "delta": null,
-          "premium": 68.8,
-          "moneyness_pct": 0.14887505983724258,
-          "moneyness_bucket": "+10%~+20%",
-          "cash_secured_put_annualized_pct": 3.04,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P450000",
-          "display_symbol": "腾讯 270330 450.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 450.0,
-          "last_price": 50.5,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 3,
-          "open_interest": 7801,
-          "implied_volatility": 0.30579999999999996,
-          "delta": null,
-          "premium": 50.5,
-          "moneyness_pct": 0.077070368597415,
-          "moneyness_bucket": "+5%~+10%",
-          "cash_secured_put_annualized_pct": 9.0,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1335,55 +1126,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 5.07,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P470000",
-          "display_symbol": "腾讯 270330 470.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 470.0,
-          "last_price": 0.0,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 0,
-          "open_interest": 7501,
-          "implied_volatility": null,
-          "delta": null,
-          "premium": 0.0,
-          "moneyness_pct": 0.12494016275730013,
-          "moneyness_bucket": "+10%~+20%",
-          "cash_secured_put_annualized_pct": -24.57,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P440000",
-          "display_symbol": "腾讯 270330 440.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 440.0,
-          "last_price": 0.0,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 0,
-          "open_interest": 7290,
-          "implied_volatility": null,
-          "delta": null,
-          "premium": 0.0,
-          "moneyness_pct": 0.053135471517472554,
-          "moneyness_bucket": "+5%~+10%",
-          "cash_secured_put_annualized_pct": -11.16,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1407,31 +1150,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 2.03,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P390000",
-          "display_symbol": "腾讯 270330 390.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 390.0,
-          "last_price": 17.5,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 46,
-          "open_interest": 6988,
-          "implied_volatility": 0.2902,
-          "delta": null,
-          "premium": 17.5,
-          "moneyness_pct": -0.06653901388224037,
-          "moneyness_bucket": "-10%~-5%",
-          "cash_secured_put_annualized_pct": 9.93,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1455,7 +1174,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 21.42,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1479,7 +1198,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 15.01,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1503,7 +1222,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 7.54,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1527,7 +1246,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 30.83,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1551,7 +1270,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.29,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1575,31 +1294,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 3.77,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P370000",
-          "display_symbol": "腾讯 270330 370.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 370.0,
-          "last_price": 10.97,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 45,
-          "open_interest": 6329,
-          "implied_volatility": 0.2895,
-          "delta": null,
-          "premium": 10.97,
-          "moneyness_pct": -0.1144088080421255,
-          "moneyness_bucket": "-20%~-10%",
-          "cash_secured_put_annualized_pct": 6.56,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1623,7 +1318,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 12.5,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1647,7 +1342,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 6.54,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1671,7 +1366,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -1.77,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1695,7 +1390,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 4.54,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1719,7 +1414,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 9.22,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1743,7 +1438,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 13.64,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1767,7 +1462,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 8.93,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1791,7 +1486,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -5.08,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1815,7 +1510,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 12.53,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1839,7 +1534,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 11.68,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1863,7 +1558,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 5.82,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1887,7 +1582,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 2.77,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1911,7 +1606,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.7,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1935,7 +1630,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -9.94,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1959,7 +1654,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 7.49,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1983,7 +1678,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 10.83,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2007,7 +1702,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.44,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2031,31 +1726,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.74,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P460000",
-          "display_symbol": "腾讯 270330 460.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 460.0,
-          "last_price": 54.36,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 16,
-          "open_interest": 3863,
-          "implied_volatility": 0.2782,
-          "delta": null,
-          "premium": 54.36,
-          "moneyness_pct": 0.10100526567735746,
-          "moneyness_bucket": "+10%~+20%",
-          "cash_secured_put_annualized_pct": 5.85,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2079,7 +1750,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 5.99,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2103,7 +1774,7 @@
           "moneyness_pct": -0.006701771182383909,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 167.11,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2127,7 +1798,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 18.48,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2151,7 +1822,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 3.81,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2175,7 +1846,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 7.09,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2199,7 +1870,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2223,7 +1894,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 9.14,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2247,7 +1918,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 199.88,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2271,7 +1942,7 @@
           "moneyness_pct": 0.017233125897558654,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 65.27,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2295,7 +1966,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 5.35,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2319,7 +1990,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.69,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2343,7 +2014,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 17.12,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2367,7 +2038,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 2.2,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2391,7 +2062,31 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -0.47,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
+          "contract_multiplier": 100
+        },
+        {
+          "underlying_symbol": "HK.00700",
+          "contract_symbol": "HK.TCH270929P450000",
+          "display_symbol": "腾讯 270929 450.00 沽",
+          "chain_symbol": "HK.00700",
+          "option_type": "PUT",
+          "expiry_date": "2027-09-29",
+          "days_to_expiry": 348,
+          "strike_price": 450.0,
+          "last_price": 62.5,
+          "bid_price": 0.0,
+          "ask_price": 0.0,
+          "mid_price": null,
+          "volume": 6,
+          "open_interest": 1919,
+          "implied_volatility": 0.2983,
+          "delta": null,
+          "premium": 62.5,
+          "moneyness_pct": 0.077070368597415,
+          "moneyness_bucket": "+5%~+10%",
+          "cash_secured_put_annualized_pct": 7.06,
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2415,7 +2110,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 4.35,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2439,7 +2134,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 48.96,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2463,7 +2158,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 8.13,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2487,7 +2182,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -15.84,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2511,7 +2206,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 6.58,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2535,7 +2230,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 6.72,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2559,7 +2254,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 9.12,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2583,7 +2278,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 14.4,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2607,7 +2302,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.07,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2631,7 +2326,31 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.42,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
+          "contract_multiplier": 100
+        },
+        {
+          "underlying_symbol": "HK.00700",
+          "contract_symbol": "HK.TCH270929P470000",
+          "display_symbol": "腾讯 270929 470.00 沽",
+          "chain_symbol": "HK.00700",
+          "option_type": "PUT",
+          "expiry_date": "2027-09-29",
+          "days_to_expiry": 348,
+          "strike_price": 470.0,
+          "last_price": 74.82,
+          "bid_price": 0.0,
+          "ask_price": 0.0,
+          "mid_price": null,
+          "volume": 5,
+          "open_interest": 1017,
+          "implied_volatility": 0.2921,
+          "delta": null,
+          "premium": 74.82,
+          "moneyness_pct": 0.12494016275730013,
+          "moneyness_bucket": "+10%~+20%",
+          "cash_secured_put_annualized_pct": 5.05,
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2655,7 +2374,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 5.13,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2679,7 +2398,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 6.95,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2703,7 +2422,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 7.3,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2727,7 +2446,7 @@
           "moneyness_pct": -0.030636668262326472,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 20.73,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2751,7 +2470,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": -42.44,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2775,7 +2494,55 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
+          "contract_multiplier": 100
+        },
+        {
+          "underlying_symbol": "HK.00700",
+          "contract_symbol": "HK.TCH270929P480000",
+          "display_symbol": "腾讯 270929 480.00 沽",
+          "chain_symbol": "HK.00700",
+          "option_type": "PUT",
+          "expiry_date": "2027-09-29",
+          "days_to_expiry": 348,
+          "strike_price": 480.0,
+          "last_price": 81.35,
+          "bid_price": 0.0,
+          "ask_price": 0.0,
+          "mid_price": null,
+          "volume": 54,
+          "open_interest": 451,
+          "implied_volatility": 0.2907,
+          "delta": null,
+          "premium": 81.35,
+          "moneyness_pct": 0.14887505983724258,
+          "moneyness_bucket": "+10%~+20%",
+          "cash_secured_put_annualized_pct": 4.18,
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
+          "contract_multiplier": 100
+        },
+        {
+          "underlying_symbol": "HK.00700",
+          "contract_symbol": "HK.TCH270929P460000",
+          "display_symbol": "腾讯 270929 460.00 沽",
+          "chain_symbol": "HK.00700",
+          "option_type": "PUT",
+          "expiry_date": "2027-09-29",
+          "days_to_expiry": 348,
+          "strike_price": 460.0,
+          "last_price": 67.6,
+          "bid_price": 0.0,
+          "ask_price": 0.0,
+          "mid_price": null,
+          "volume": 6,
+          "open_interest": 451,
+          "implied_volatility": 0.28850000000000003,
+          "delta": null,
+          "premium": 67.6,
+          "moneyness_pct": 0.10100526567735746,
+          "moneyness_bucket": "+10%~+20%",
+          "cash_secured_put_annualized_pct": 5.79,
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2799,7 +2566,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2823,7 +2590,7 @@
           "moneyness_pct": -0.054571565342269035,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 7.39,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2847,7 +2614,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 41.71,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2871,7 +2638,7 @@
           "moneyness_pct": -0.030636668262326472,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 26.39,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2895,7 +2662,7 @@
           "moneyness_pct": 0.041168022977501106,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": -1443.22,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2919,7 +2686,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 15.9,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2943,7 +2710,7 @@
           "moneyness_pct": -0.006701771182383909,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 69.1,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2967,7 +2734,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 72.01,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2991,7 +2758,7 @@
           "moneyness_pct": 0.017233125897558654,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 42.33,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3015,7 +2782,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -17.71,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3039,7 +2806,7 @@
           "moneyness_pct": -0.0785064624222116,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3063,7 +2830,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3087,7 +2854,7 @@
           "moneyness_pct": -0.0785064624222116,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 5.69,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3111,7 +2878,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.02,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3135,7 +2902,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 3.61,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3159,7 +2926,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -1841.59,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3183,7 +2950,7 @@
           "moneyness_pct": -0.054571565342269035,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 9.11,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3207,7 +2974,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.99,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3231,7 +2998,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -32.2,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3255,7 +3022,7 @@
           "moneyness_pct": 0.041168022977501106,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": -4.91,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3279,7 +3046,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 30.92,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3303,7 +3070,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 8.42,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3327,7 +3094,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -2611.78,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3351,7 +3118,7 @@
           "moneyness_pct": 0.06510292005744378,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -318.72,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3375,7 +3142,7 @@
           "moneyness_pct": 0.06510292005744378,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -2231.01,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3399,7 +3166,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -45.48,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3423,7 +3190,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3447,7 +3214,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -263.08,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3471,7 +3238,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3495,7 +3262,7 @@
           "moneyness_pct": -0.12637625658209672,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 1.0,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3519,7 +3286,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 3.7,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3543,7 +3310,7 @@
           "moneyness_pct": -0.10244135950215416,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3567,7 +3334,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3591,7 +3358,7 @@
           "moneyness_pct": -0.12637625658209672,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3615,7 +3382,7 @@
           "moneyness_pct": -0.10244135950215416,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3639,7 +3406,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -373.11,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3663,7 +3430,7 @@
           "moneyness_pct": 0.08903781713738623,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -426.31,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3687,7 +3454,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -478.35,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3711,7 +3478,7 @@
           "moneyness_pct": 0.1129727142173289,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -529.28,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3735,7 +3502,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -579.12,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3759,7 +3526,7 @@
           "moneyness_pct": 0.13690761129727136,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -627.91,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3783,7 +3550,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -675.68,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3807,7 +3574,7 @@
           "moneyness_pct": 0.08903781713738623,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -2984.18,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3831,7 +3598,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -3348.48,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3855,7 +3622,7 @@
           "moneyness_pct": 0.1129727142173289,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -3704.95,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3879,7 +3646,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -4053.83,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3903,7 +3670,7 @@
           "moneyness_pct": 0.13690761129727136,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -4395.37,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3927,7 +3694,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -4729.79,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         }
       ],
@@ -3953,7 +3720,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 29.64,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3977,7 +3744,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 52.68,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4001,31 +3768,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 15.48,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P410000",
-          "display_symbol": "腾讯 270330 410.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 410.0,
-          "last_price": 25.6,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 1416,
-          "open_interest": 28925,
-          "implied_volatility": 0.2866,
-          "delta": null,
-          "premium": 25.6,
-          "moneyness_pct": -0.018669219722355246,
-          "moneyness_bucket": "-5%~+5%",
-          "cash_secured_put_annualized_pct": 13.81,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4049,31 +3792,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 17.09,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P400000",
-          "display_symbol": "腾讯 270330 400.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 400.0,
-          "last_price": 21.12,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 1534,
-          "open_interest": 24413,
-          "implied_volatility": 0.2868,
-          "delta": null,
-          "premium": 21.12,
-          "moneyness_pct": -0.04260411680229781,
-          "moneyness_bucket": "-5%~+5%",
-          "cash_secured_put_annualized_pct": 11.68,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4097,7 +3816,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 18.6,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4121,7 +3840,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 9.03,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4145,31 +3864,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 14.16,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P420000",
-          "display_symbol": "腾讯 270330 420.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 420.0,
-          "last_price": 30.5,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 1012,
-          "open_interest": 16750,
-          "implied_volatility": 0.2871,
-          "delta": null,
-          "premium": 30.5,
-          "moneyness_pct": 0.005265677357587428,
-          "moneyness_bucket": "-5%~+5%",
-          "cash_secured_put_annualized_pct": 14.91,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4193,7 +3888,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.84,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4217,7 +3912,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 22.1,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4241,7 +3936,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 19.59,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4265,7 +3960,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 35.95,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4289,7 +3984,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 9.5,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4313,7 +4008,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 18.58,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4337,7 +4032,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 6.64,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4361,7 +4056,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 11.64,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4385,7 +4080,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 16.59,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4409,31 +4104,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 26.41,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P360000",
-          "display_symbol": "腾讯 270330 360.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 360.0,
-          "last_price": 9.2,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 258,
-          "open_interest": 8982,
-          "implied_volatility": 0.2984,
-          "delta": null,
-          "premium": 9.2,
-          "moneyness_pct": -0.13834370512206795,
-          "moneyness_bucket": "-20%~-10%",
-          "cash_secured_put_annualized_pct": 5.65,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4457,7 +4128,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 15.06,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4481,55 +4152,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.78,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P380000",
-          "display_symbol": "腾讯 270330 380.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 380.0,
-          "last_price": 14.4,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 87,
-          "open_interest": 7949,
-          "implied_volatility": 0.29359999999999997,
-          "delta": null,
-          "premium": 14.4,
-          "moneyness_pct": -0.09047391096218294,
-          "moneyness_bucket": "-10%~-5%",
-          "cash_secured_put_annualized_pct": 8.38,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P430000",
-          "display_symbol": "腾讯 270330 430.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 430.0,
-          "last_price": 34.31,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 83,
-          "open_interest": 7887,
-          "implied_volatility": 0.2709,
-          "delta": null,
-          "premium": 34.31,
-          "moneyness_pct": 0.02920057443752988,
-          "moneyness_bucket": "-5%~+5%",
-          "cash_secured_put_annualized_pct": 11.37,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4553,55 +4176,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -4.99,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P480000",
-          "display_symbol": "腾讯 270330 480.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 480.0,
-          "last_price": 68.8,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 2,
-          "open_interest": 7841,
-          "implied_volatility": 0.2701,
-          "delta": null,
-          "premium": 68.8,
-          "moneyness_pct": 0.14887505983724258,
-          "moneyness_bucket": "+10%~+20%",
-          "cash_secured_put_annualized_pct": 3.04,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P450000",
-          "display_symbol": "腾讯 270330 450.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 450.0,
-          "last_price": 50.5,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 3,
-          "open_interest": 7801,
-          "implied_volatility": 0.30579999999999996,
-          "delta": null,
-          "premium": 50.5,
-          "moneyness_pct": 0.077070368597415,
-          "moneyness_bucket": "+5%~+10%",
-          "cash_secured_put_annualized_pct": 9.0,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4625,55 +4200,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 5.07,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P470000",
-          "display_symbol": "腾讯 270330 470.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 470.0,
-          "last_price": 0.0,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 0,
-          "open_interest": 7501,
-          "implied_volatility": null,
-          "delta": null,
-          "premium": 0.0,
-          "moneyness_pct": 0.12494016275730013,
-          "moneyness_bucket": "+10%~+20%",
-          "cash_secured_put_annualized_pct": -24.57,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P440000",
-          "display_symbol": "腾讯 270330 440.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 440.0,
-          "last_price": 0.0,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 0,
-          "open_interest": 7290,
-          "implied_volatility": null,
-          "delta": null,
-          "premium": 0.0,
-          "moneyness_pct": 0.053135471517472554,
-          "moneyness_bucket": "+5%~+10%",
-          "cash_secured_put_annualized_pct": -11.16,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4697,31 +4224,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 2.03,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P390000",
-          "display_symbol": "腾讯 270330 390.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 390.0,
-          "last_price": 17.5,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 46,
-          "open_interest": 6988,
-          "implied_volatility": 0.2902,
-          "delta": null,
-          "premium": 17.5,
-          "moneyness_pct": -0.06653901388224037,
-          "moneyness_bucket": "-10%~-5%",
-          "cash_secured_put_annualized_pct": 9.93,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4745,7 +4248,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 21.42,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4769,7 +4272,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 15.01,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4793,7 +4296,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 7.54,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4817,7 +4320,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 30.83,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4841,7 +4344,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.29,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4865,31 +4368,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 3.77,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P370000",
-          "display_symbol": "腾讯 270330 370.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 370.0,
-          "last_price": 10.97,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 45,
-          "open_interest": 6329,
-          "implied_volatility": 0.2895,
-          "delta": null,
-          "premium": 10.97,
-          "moneyness_pct": -0.1144088080421255,
-          "moneyness_bucket": "-20%~-10%",
-          "cash_secured_put_annualized_pct": 6.56,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4913,7 +4392,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 12.5,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4937,7 +4416,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 6.54,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4961,7 +4440,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -1.77,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -4985,7 +4464,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 4.54,
-          "trade_time": "2026-10-16T00:53:16.084068+00:00",
+          "trade_time": "2026-10-16T01:03:50.292620+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5009,7 +4488,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 9.22,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5033,7 +4512,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 13.64,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5057,7 +4536,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 8.93,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5081,7 +4560,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -5.08,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5105,7 +4584,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 12.53,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5129,7 +4608,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 11.68,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5153,7 +4632,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 5.82,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5177,7 +4656,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 2.77,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5201,7 +4680,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.7,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5225,7 +4704,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -9.94,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5249,7 +4728,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 7.49,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5273,7 +4752,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 10.83,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5297,7 +4776,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.44,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5321,31 +4800,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.74,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
-          "contract_multiplier": 100
-        },
-        {
-          "underlying_symbol": "HK.00700",
-          "contract_symbol": "HK.TCH270330P460000",
-          "display_symbol": "腾讯 270330 460.00 沽",
-          "chain_symbol": "HK.00700",
-          "option_type": "PUT",
-          "expiry_date": "2027-03-30",
-          "days_to_expiry": 165,
-          "strike_price": 460.0,
-          "last_price": 54.36,
-          "bid_price": 0.0,
-          "ask_price": 0.0,
-          "mid_price": null,
-          "volume": 16,
-          "open_interest": 3863,
-          "implied_volatility": 0.2782,
-          "delta": null,
-          "premium": 54.36,
-          "moneyness_pct": 0.10100526567735746,
-          "moneyness_bucket": "+10%~+20%",
-          "cash_secured_put_annualized_pct": 5.85,
-          "trade_time": "2026-10-16T00:55:01.362183+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5369,7 +4824,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 5.99,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5393,7 +4848,7 @@
           "moneyness_pct": -0.006701771182383909,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 167.11,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5417,7 +4872,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 18.48,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5441,7 +4896,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 3.81,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5465,7 +4920,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 7.09,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5489,7 +4944,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5513,7 +4968,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 9.14,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5537,7 +4992,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 199.88,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5561,7 +5016,7 @@
           "moneyness_pct": 0.017233125897558654,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 65.27,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5585,7 +5040,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 5.35,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5609,7 +5064,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.69,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5633,7 +5088,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 17.12,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5657,7 +5112,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 2.2,
-          "trade_time": "2026-10-16T00:51:38.413449+00:00",
+          "trade_time": "2026-10-16T01:02:01.719395+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5681,7 +5136,31 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -0.47,
-          "trade_time": "2026-10-16T00:52:28.855002+00:00",
+          "trade_time": "2026-10-16T01:02:56.048794+00:00",
+          "contract_multiplier": 100
+        },
+        {
+          "underlying_symbol": "HK.00700",
+          "contract_symbol": "HK.TCH270929P450000",
+          "display_symbol": "腾讯 270929 450.00 沽",
+          "chain_symbol": "HK.00700",
+          "option_type": "PUT",
+          "expiry_date": "2027-09-29",
+          "days_to_expiry": 348,
+          "strike_price": 450.0,
+          "last_price": 62.5,
+          "bid_price": 0.0,
+          "ask_price": 0.0,
+          "mid_price": null,
+          "volume": 6,
+          "open_interest": 1919,
+          "implied_volatility": 0.2983,
+          "delta": null,
+          "premium": 62.5,
+          "moneyness_pct": 0.077070368597415,
+          "moneyness_bucket": "+5%~+10%",
+          "cash_secured_put_annualized_pct": 7.06,
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5705,7 +5184,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 4.35,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5729,7 +5208,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 48.96,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5753,7 +5232,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 8.13,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5777,7 +5256,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -15.84,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5801,7 +5280,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 6.58,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5825,7 +5304,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 6.72,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5849,7 +5328,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 9.12,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5873,7 +5352,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 14.4,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5897,7 +5376,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.07,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5921,7 +5400,31 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.42,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
+          "contract_multiplier": 100
+        },
+        {
+          "underlying_symbol": "HK.00700",
+          "contract_symbol": "HK.TCH270929P470000",
+          "display_symbol": "腾讯 270929 470.00 沽",
+          "chain_symbol": "HK.00700",
+          "option_type": "PUT",
+          "expiry_date": "2027-09-29",
+          "days_to_expiry": 348,
+          "strike_price": 470.0,
+          "last_price": 74.82,
+          "bid_price": 0.0,
+          "ask_price": 0.0,
+          "mid_price": null,
+          "volume": 5,
+          "open_interest": 1017,
+          "implied_volatility": 0.2921,
+          "delta": null,
+          "premium": 74.82,
+          "moneyness_pct": 0.12494016275730013,
+          "moneyness_bucket": "+10%~+20%",
+          "cash_secured_put_annualized_pct": 5.05,
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5945,7 +5448,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 5.13,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5969,7 +5472,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 6.95,
-          "trade_time": "2026-10-16T00:56:06.653355+00:00",
+          "trade_time": "2026-10-16T01:05:38.488896+00:00",
           "contract_multiplier": 100
         },
         {
@@ -5993,7 +5496,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 7.3,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6017,7 +5520,7 @@
           "moneyness_pct": -0.030636668262326472,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 20.73,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6041,7 +5544,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": -42.44,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6065,7 +5568,55 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
+          "contract_multiplier": 100
+        },
+        {
+          "underlying_symbol": "HK.00700",
+          "contract_symbol": "HK.TCH270929P480000",
+          "display_symbol": "腾讯 270929 480.00 沽",
+          "chain_symbol": "HK.00700",
+          "option_type": "PUT",
+          "expiry_date": "2027-09-29",
+          "days_to_expiry": 348,
+          "strike_price": 480.0,
+          "last_price": 81.35,
+          "bid_price": 0.0,
+          "ask_price": 0.0,
+          "mid_price": null,
+          "volume": 54,
+          "open_interest": 451,
+          "implied_volatility": 0.2907,
+          "delta": null,
+          "premium": 81.35,
+          "moneyness_pct": 0.14887505983724258,
+          "moneyness_bucket": "+10%~+20%",
+          "cash_secured_put_annualized_pct": 4.18,
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
+          "contract_multiplier": 100
+        },
+        {
+          "underlying_symbol": "HK.00700",
+          "contract_symbol": "HK.TCH270929P460000",
+          "display_symbol": "腾讯 270929 460.00 沽",
+          "chain_symbol": "HK.00700",
+          "option_type": "PUT",
+          "expiry_date": "2027-09-29",
+          "days_to_expiry": 348,
+          "strike_price": 460.0,
+          "last_price": 67.6,
+          "bid_price": 0.0,
+          "ask_price": 0.0,
+          "mid_price": null,
+          "volume": 6,
+          "open_interest": 451,
+          "implied_volatility": 0.28850000000000003,
+          "delta": null,
+          "premium": 67.6,
+          "moneyness_pct": 0.10100526567735746,
+          "moneyness_bucket": "+10%~+20%",
+          "cash_secured_put_annualized_pct": 5.79,
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6089,7 +5640,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:57:03.613612+00:00",
+          "trade_time": "2026-10-16T01:06:28.011310+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6113,7 +5664,7 @@
           "moneyness_pct": -0.054571565342269035,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 7.39,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6137,7 +5688,7 @@
           "moneyness_pct": -0.018669219722355246,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 41.71,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6161,7 +5712,7 @@
           "moneyness_pct": -0.030636668262326472,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 26.39,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6185,7 +5736,7 @@
           "moneyness_pct": 0.041168022977501106,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": -1443.22,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6209,7 +5760,7 @@
           "moneyness_pct": -0.04260411680229781,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 15.9,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6233,7 +5784,7 @@
           "moneyness_pct": -0.006701771182383909,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 69.1,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6257,7 +5808,7 @@
           "moneyness_pct": 0.005265677357587428,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 72.01,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6281,7 +5832,7 @@
           "moneyness_pct": 0.017233125897558654,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 42.33,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6305,7 +5856,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -17.71,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6329,7 +5880,7 @@
           "moneyness_pct": -0.0785064624222116,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6353,7 +5904,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6377,7 +5928,7 @@
           "moneyness_pct": -0.0785064624222116,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 5.69,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6401,7 +5952,7 @@
           "moneyness_pct": -0.06653901388224037,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.02,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6425,7 +5976,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 3.61,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6449,7 +6000,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -1841.59,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6473,7 +6024,7 @@
           "moneyness_pct": -0.054571565342269035,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 9.11,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6497,7 +6048,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.99,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6521,7 +6072,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -32.2,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6545,7 +6096,7 @@
           "moneyness_pct": 0.041168022977501106,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": -4.91,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6569,7 +6120,7 @@
           "moneyness_pct": 0.02920057443752988,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 30.92,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6593,7 +6144,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 8.42,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6617,7 +6168,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -2611.78,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6641,7 +6192,7 @@
           "moneyness_pct": 0.06510292005744378,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -318.72,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6665,7 +6216,7 @@
           "moneyness_pct": 0.06510292005744378,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -2231.01,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6689,7 +6240,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -45.48,
-          "trade_time": "2026-10-16T00:54:15.651126+00:00",
+          "trade_time": "2026-10-16T01:04:43.629435+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6713,7 +6264,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6737,7 +6288,7 @@
           "moneyness_pct": 0.053135471517472554,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -263.08,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6761,7 +6312,7 @@
           "moneyness_pct": -0.1144088080421255,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6785,7 +6336,7 @@
           "moneyness_pct": -0.12637625658209672,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 1.0,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6809,7 +6360,7 @@
           "moneyness_pct": -0.09047391096218294,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 3.7,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6833,7 +6384,7 @@
           "moneyness_pct": -0.10244135950215416,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6857,7 +6408,7 @@
           "moneyness_pct": -0.13834370512206795,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6881,7 +6432,7 @@
           "moneyness_pct": -0.12637625658209672,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6905,7 +6456,7 @@
           "moneyness_pct": -0.10244135950215416,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6929,7 +6480,7 @@
           "moneyness_pct": 0.077070368597415,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -373.11,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6953,7 +6504,7 @@
           "moneyness_pct": 0.08903781713738623,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -426.31,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -6977,7 +6528,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -478.35,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -7001,7 +6552,7 @@
           "moneyness_pct": 0.1129727142173289,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -529.28,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -7025,7 +6576,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -579.12,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -7049,7 +6600,7 @@
           "moneyness_pct": 0.13690761129727136,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -627.91,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -7073,7 +6624,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -675.68,
-          "trade_time": "2026-10-16T00:51:08.085175+00:00",
+          "trade_time": "2026-10-16T01:01:28.324551+00:00",
           "contract_multiplier": 100
         },
         {
@@ -7097,7 +6648,7 @@
           "moneyness_pct": 0.08903781713738623,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -2984.18,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -7121,7 +6672,7 @@
           "moneyness_pct": 0.10100526567735746,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -3348.48,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -7145,7 +6696,7 @@
           "moneyness_pct": 0.1129727142173289,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -3704.95,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -7169,7 +6720,7 @@
           "moneyness_pct": 0.12494016275730013,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -4053.83,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -7193,7 +6744,7 @@
           "moneyness_pct": 0.13690761129727136,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -4395.37,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         },
         {
@@ -7217,7 +6768,7 @@
           "moneyness_pct": 0.14887505983724258,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -4729.79,
-          "trade_time": "2026-10-16T00:50:40.446231+00:00",
+          "trade_time": "2026-10-16T01:00:51.309638+00:00",
           "contract_multiplier": 100
         }
       ],
