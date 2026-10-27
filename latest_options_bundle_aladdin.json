@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at_utc": "2026-10-27T08:29:30.038113+00:00",
+    "generated_at_utc": "2026-10-27T08:39:30.489074+00:00",
     "bundle_version": 1,
     "asset_count": 1,
     "successful_source_count": 1,
@@ -27,8 +27,8 @@
       "asset_code": "TENCENT",
       "status": "ok",
       "message": "",
-      "retrieved_at": "2026-10-27T08:29:29.147734+00:00",
-      "contract_count": 1148,
+      "retrieved_at": "2026-10-27T08:39:29.414828+00:00",
+      "contract_count": 1150,
       "provider": "HKEX"
     },
     {
@@ -59,7 +59,7 @@
         "source_type": "website_scrape",
         "delayed": true,
         "status": "ok",
-        "retrieved_at": "2026-10-27T08:29:29.147734+00:00",
+        "retrieved_at": "2026-10-27T08:39:29.414828+00:00",
         "notes": [
           "腾讯港股期权链来自 HKEX 公共网页，腾讯现价来自 Yahoo Finance 公共行情。"
         ]
@@ -77,7 +77,7 @@
           "percent_change": null,
           "volume": null,
           "open_interest": null,
-          "trade_time": "2026-10-27T08:29:29.147734+00:00",
+          "trade_time": "2026-10-27T08:39:29.414828+00:00",
           "trade_time_epoch": null
         }
       ],
@@ -199,15 +199,15 @@
           {
             "expiry_date": "2026-10-29",
             "total_open_interest": 134848,
-            "total_volume": 10842,
-            "avg_iv": 0.40952500000000003,
+            "total_volume": 11000,
+            "avg_iv": 0.7234999999999999,
             "contract_count": 12
           },
           {
             "expiry_date": "2026-11-27",
             "total_open_interest": 97091,
             "total_volume": 4440,
-            "avg_iv": 0.32237272727272726,
+            "avg_iv": 0.3362545454545454,
             "contract_count": 12
           },
           {
@@ -220,7 +220,7 @@
           {
             "expiry_date": "2027-01-28",
             "total_open_interest": 48157,
-            "total_volume": 4488,
+            "total_volume": 6738,
             "avg_iv": 0.2919222222222222,
             "contract_count": 12
           },
@@ -235,14 +235,14 @@
             "expiry_date": "2026-10-30",
             "total_open_interest": 17000,
             "total_volume": 1098,
-            "avg_iv": 0.4178285714285714,
+            "avg_iv": 0.45528571428571435,
             "contract_count": 23
           },
           {
             "expiry_date": "2026-11-06",
             "total_open_interest": 2836,
             "total_volume": 1030,
-            "avg_iv": 0.30210000000000004,
+            "avg_iv": 0.3191,
             "contract_count": 23
           }
         ],
@@ -257,7 +257,7 @@
             "ask_price": 0.0,
             "volume": 784,
             "open_interest": 37964,
-            "implied_volatility": null,
+            "implied_volatility": 0.8745999999999999,
             "cash_secured_put_annualized_pct": 46.06
           },
           {
@@ -309,7 +309,7 @@
             "ask_price": 0.0,
             "volume": 319,
             "open_interest": 24724,
-            "implied_volatility": null,
+            "implied_volatility": 1.038,
             "cash_secured_put_annualized_pct": 42.44
           },
           {
@@ -361,7 +361,7 @@
             "ask_price": 0.0,
             "volume": 1903,
             "open_interest": 18572,
-            "implied_volatility": 0.4861,
+            "implied_volatility": 0.5796,
             "cash_secured_put_annualized_pct": 78.02
           },
           {
@@ -400,10 +400,23 @@
             "last_price": 2.31,
             "bid_price": 0.0,
             "ask_price": 0.0,
-            "volume": 4022,
+            "volume": 4180,
             "open_interest": 7599,
-            "implied_volatility": 0.36700000000000005,
+            "implied_volatility": 0.3924,
             "cash_secured_put_annualized_pct": 110.94
+          },
+          {
+            "contract_symbol": "HK.TCH270128P390000",
+            "underlying_symbol": "HK.00700",
+            "expiry_date": "2027-01-28",
+            "strike_price": 390.0,
+            "last_price": 23.93,
+            "bid_price": 0.0,
+            "ask_price": 0.0,
+            "volume": 2940,
+            "open_interest": 5234,
+            "implied_volatility": 0.29309999999999997,
+            "cash_secured_put_annualized_pct": 19.25
           },
           {
             "contract_symbol": "HK.TCH270128P350000",
@@ -454,7 +467,7 @@
             "ask_price": 0.0,
             "volume": 1903,
             "open_interest": 18572,
-            "implied_volatility": 0.4861,
+            "implied_volatility": 0.5796,
             "cash_secured_put_annualized_pct": 78.02
           },
           {
@@ -467,7 +480,7 @@
             "ask_price": 0.0,
             "volume": 1497,
             "open_interest": 12930,
-            "implied_volatility": 0.37070000000000003,
+            "implied_volatility": 0.4207,
             "cash_secured_put_annualized_pct": 130.09
           },
           {
@@ -480,7 +493,7 @@
             "ask_price": 0.0,
             "volume": 1296,
             "open_interest": 13437,
-            "implied_volatility": 0.3081,
+            "implied_volatility": 0.3156,
             "cash_secured_put_annualized_pct": 35.01
           },
           {
@@ -493,21 +506,8 @@
             "ask_price": 0.0,
             "volume": 1075,
             "open_interest": 6028,
-            "implied_volatility": 0.4143,
-            "cash_secured_put_annualized_pct": 29.1
-          },
-          {
-            "contract_symbol": "HK.TCH261029P410000",
-            "underlying_symbol": "HK.00700",
-            "expiry_date": "2026-10-29",
-            "strike_price": 410.0,
-            "last_price": 25.8,
-            "bid_price": 0.0,
-            "ask_price": 0.0,
-            "volume": 844,
-            "open_interest": 12828,
             "implied_volatility": null,
-            "cash_secured_put_annualized_pct": 44.51
+            "cash_secured_put_annualized_pct": 29.1
           }
         ],
         "top_puts_by_annualized": [
@@ -521,7 +521,7 @@
             "ask_price": 0.0,
             "volume": 101,
             "open_interest": 1712,
-            "implied_volatility": 0.37579999999999997,
+            "implied_volatility": 0.40590000000000004,
             "cash_secured_put_annualized_pct": 173.81
           },
           {
@@ -532,9 +532,9 @@
             "last_price": 2.31,
             "bid_price": 0.0,
             "ask_price": 0.0,
-            "volume": 4022,
+            "volume": 4180,
             "open_interest": 7599,
-            "implied_volatility": 0.36700000000000005,
+            "implied_volatility": 0.3924,
             "cash_secured_put_annualized_pct": 110.94
           },
           {
@@ -547,7 +547,7 @@
             "ask_price": 0.0,
             "volume": 472,
             "open_interest": 6580,
-            "implied_volatility": 0.35240000000000005,
+            "implied_volatility": 0.37310000000000004,
             "cash_secured_put_annualized_pct": 95.09
           },
           {
@@ -560,7 +560,7 @@
             "ask_price": 0.0,
             "volume": 83,
             "open_interest": 1534,
-            "implied_volatility": 0.3128,
+            "implied_volatility": 0.32909999999999995,
             "cash_secured_put_annualized_pct": 76.89
           },
           {
@@ -573,7 +573,7 @@
             "ask_price": 0.0,
             "volume": 147,
             "open_interest": 787,
-            "implied_volatility": 0.3754,
+            "implied_volatility": 0.39280000000000004,
             "cash_secured_put_annualized_pct": 57.1
           },
           {
@@ -586,7 +586,7 @@
             "ask_price": 0.0,
             "volume": 146,
             "open_interest": 71,
-            "implied_volatility": 0.309,
+            "implied_volatility": 0.32270000000000004,
             "cash_secured_put_annualized_pct": 54.75
           },
           {
@@ -599,7 +599,7 @@
             "ask_price": 0.0,
             "volume": 150,
             "open_interest": 132,
-            "implied_volatility": 0.3118,
+            "implied_volatility": 0.32299999999999995,
             "cash_secured_put_annualized_pct": 38.35
           },
           {
@@ -612,7 +612,7 @@
             "ask_price": 0.0,
             "volume": 1296,
             "open_interest": 13437,
-            "implied_volatility": 0.3081,
+            "implied_volatility": 0.3156,
             "cash_secured_put_annualized_pct": 35.01
           },
           {
@@ -625,7 +625,7 @@
             "ask_price": 0.0,
             "volume": 85,
             "open_interest": 684,
-            "implied_volatility": 0.4008,
+            "implied_volatility": 0.4157,
             "cash_secured_put_annualized_pct": 33.87
           },
           {
@@ -638,7 +638,7 @@
             "ask_price": 0.0,
             "volume": 1075,
             "open_interest": 6028,
-            "implied_volatility": 0.4143,
+            "implied_volatility": null,
             "cash_secured_put_annualized_pct": 29.1
           }
         ]
@@ -659,13 +659,13 @@
           "mid_price": null,
           "volume": 784,
           "open_interest": 37964,
-          "implied_volatility": null,
+          "implied_volatility": 0.8745999999999999,
           "delta": null,
           "premium": 35.86,
           "moneyness_pct": 0.09034267912772598,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 46.06,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -689,7 +689,7 @@
           "moneyness_pct": 0.03842159916926269,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 17.04,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -713,7 +713,7 @@
           "moneyness_pct": 0.06438213914849422,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 8.52,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -737,7 +737,7 @@
           "moneyness_pct": 0.03842159916926269,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 11.29,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -755,13 +755,13 @@
           "mid_price": null,
           "volume": 319,
           "open_interest": 24724,
-          "implied_volatility": null,
+          "implied_volatility": 1.038,
           "delta": null,
           "premium": 45.8,
           "moneyness_pct": 0.11630321910695751,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 42.44,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -785,7 +785,7 @@
           "moneyness_pct": 0.11630321910695751,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 3.58,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -809,7 +809,7 @@
           "moneyness_pct": -0.09138110072689509,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.74,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -833,7 +833,7 @@
           "moneyness_pct": -0.01349948078920038,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 23.8,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -851,13 +851,13 @@
           "mid_price": null,
           "volume": 1903,
           "open_interest": 18572,
-          "implied_volatility": 0.4861,
+          "implied_volatility": 0.5796,
           "delta": null,
           "premium": 16.51,
           "moneyness_pct": 0.03842159916926269,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 78.02,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -881,7 +881,7 @@
           "moneyness_pct": 0.09034267912772598,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 5.94,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -905,7 +905,7 @@
           "moneyness_pct": 0.14226375908618905,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 0.91,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -929,7 +929,7 @@
           "moneyness_pct": 0.06438213914849422,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 12.8,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -953,7 +953,7 @@
           "moneyness_pct": 0.09034267912772598,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 9.1,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -971,13 +971,13 @@
           "mid_price": null,
           "volume": 287,
           "open_interest": 14901,
-          "implied_volatility": 0.3048,
+          "implied_volatility": 0.317,
           "delta": null,
           "premium": 22.6,
           "moneyness_pct": 0.03842159916926269,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 22.96,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -995,13 +995,13 @@
           "mid_price": null,
           "volume": 1296,
           "open_interest": 13437,
-          "implied_volatility": 0.3081,
+          "implied_volatility": 0.3156,
           "delta": null,
           "premium": 11.3,
           "moneyness_pct": -0.01349948078920038,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 35.01,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1019,13 +1019,13 @@
           "mid_price": null,
           "volume": 1497,
           "open_interest": 12930,
-          "implied_volatility": 0.37070000000000003,
+          "implied_volatility": 0.4207,
           "delta": null,
           "premium": 7.58,
           "moneyness_pct": 0.012461059190031154,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 130.09,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1043,13 +1043,13 @@
           "mid_price": null,
           "volume": 844,
           "open_interest": 12828,
-          "implied_volatility": null,
+          "implied_volatility": 0.6796,
           "delta": null,
           "premium": 25.8,
           "moneyness_pct": 0.06438213914849422,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 44.51,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1073,7 +1073,7 @@
           "moneyness_pct": 0.09034267912772598,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -12.34,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1091,13 +1091,13 @@
           "mid_price": null,
           "volume": 148,
           "open_interest": 11509,
-          "implied_volatility": 0.3091,
+          "implied_volatility": 0.32539999999999997,
           "delta": null,
           "premium": 30.05,
           "moneyness_pct": 0.06438213914849422,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 15.08,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1121,7 +1121,7 @@
           "moneyness_pct": 0.012461059190031154,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 23.43,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1145,7 +1145,7 @@
           "moneyness_pct": -0.09138110072689509,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 10.44,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1163,13 +1163,13 @@
           "mid_price": null,
           "volume": 271,
           "open_interest": 10033,
-          "implied_volatility": 0.3045,
+          "implied_volatility": 0.314,
           "delta": null,
           "premium": 16.3,
           "moneyness_pct": 0.012461059190031154,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 34.72,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1193,7 +1193,7 @@
           "moneyness_pct": -0.06542056074766356,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 10.97,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1217,7 +1217,7 @@
           "moneyness_pct": -0.01349948078920038,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 14.71,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1241,7 +1241,7 @@
           "moneyness_pct": 0.09034267912772598,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -32.52,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1265,7 +1265,7 @@
           "moneyness_pct": -0.01349948078920038,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 12.86,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1283,13 +1283,13 @@
           "mid_price": null,
           "volume": 239,
           "open_interest": 7934,
-          "implied_volatility": 0.32,
+          "implied_volatility": 0.32630000000000003,
           "delta": null,
           "premium": 7.77,
           "moneyness_pct": -0.039460020768431914,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 24.73,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1307,13 +1307,13 @@
           "mid_price": null,
           "volume": 317,
           "open_interest": 7753,
-          "implied_volatility": 0.2919,
+          "implied_volatility": 0.3152,
           "delta": null,
           "premium": 37.67,
           "moneyness_pct": 0.09034267912772598,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 8.05,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1337,7 +1337,7 @@
           "moneyness_pct": -0.039460020768431914,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 18.33,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1353,15 +1353,15 @@
           "bid_price": 0.0,
           "ask_price": 0.0,
           "mid_price": null,
-          "volume": 4022,
+          "volume": 4180,
           "open_interest": 7599,
-          "implied_volatility": 0.36700000000000005,
+          "implied_volatility": 0.3924,
           "delta": null,
           "premium": 2.31,
           "moneyness_pct": -0.01349948078920038,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 110.94,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1385,7 +1385,7 @@
           "moneyness_pct": 0.03842159916926269,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 14.58,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1409,7 +1409,7 @@
           "moneyness_pct": 0.11630321910695751,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 4.74,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1433,7 +1433,7 @@
           "moneyness_pct": -0.09138110072689509,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 9.76,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1457,7 +1457,7 @@
           "moneyness_pct": -0.039460020768431914,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1481,7 +1481,7 @@
           "moneyness_pct": -0.09138110072689509,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.43,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1505,7 +1505,7 @@
           "moneyness_pct": 0.012461059190031154,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 13.9,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1529,7 +1529,7 @@
           "moneyness_pct": 0.14226375908618905,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 4.47,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1547,13 +1547,13 @@
           "mid_price": null,
           "volume": 58,
           "open_interest": 6703,
-          "implied_volatility": null,
+          "implied_volatility": 1.0796,
           "delta": null,
           "premium": 55.4,
           "moneyness_pct": 0.14226375908618905,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 24.89,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1571,13 +1571,13 @@
           "mid_price": null,
           "volume": 472,
           "open_interest": 6580,
-          "implied_volatility": 0.35240000000000005,
+          "implied_volatility": 0.37310000000000004,
           "delta": null,
           "premium": 2.97,
           "moneyness_pct": -0.01349948078920038,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 95.09,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1601,7 +1601,7 @@
           "moneyness_pct": -0.11734164070612663,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 7.34,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1619,13 +1619,13 @@
           "mid_price": null,
           "volume": 83,
           "open_interest": 6566,
-          "implied_volatility": 0.3577,
+          "implied_volatility": 0.39189999999999997,
           "delta": null,
           "premium": 57.0,
           "moneyness_pct": 0.14226375908618905,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 5.89,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1643,13 +1643,13 @@
           "mid_price": null,
           "volume": 47,
           "open_interest": 6488,
-          "implied_volatility": 0.3179,
+          "implied_volatility": 0.3477,
           "delta": null,
           "premium": 47.1,
           "moneyness_pct": 0.11630321910695751,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 6.3,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1673,7 +1673,7 @@
           "moneyness_pct": -0.039460020768431914,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 12.89,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1697,7 +1697,7 @@
           "moneyness_pct": -0.06542056074766356,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 13.91,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1721,7 +1721,7 @@
           "moneyness_pct": -0.01349948078920038,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 19.61,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1739,13 +1739,13 @@
           "mid_price": null,
           "volume": 1075,
           "open_interest": 6028,
-          "implied_volatility": 0.4143,
+          "implied_volatility": null,
           "delta": null,
           "premium": 0.59,
           "moneyness_pct": -0.039460020768431914,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 29.1,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1769,7 +1769,7 @@
           "moneyness_pct": 0.11630321910695751,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -11.28,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1793,7 +1793,7 @@
           "moneyness_pct": -0.11734164070612663,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 7.46,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1817,7 +1817,7 @@
           "moneyness_pct": 0.14226375908618905,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -18.55,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1841,7 +1841,7 @@
           "moneyness_pct": -0.01349948078920038,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.65,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1857,7 +1857,7 @@
           "bid_price": 0.0,
           "ask_price": 0.0,
           "mid_price": null,
-          "volume": 690,
+          "volume": 2940,
           "open_interest": 5234,
           "implied_volatility": 0.29309999999999997,
           "delta": null,
@@ -1865,7 +1865,7 @@
           "moneyness_pct": 0.012461059190031154,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 19.25,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1883,13 +1883,13 @@
           "mid_price": null,
           "volume": 512,
           "open_interest": 5202,
-          "implied_volatility": 0.3392,
+          "implied_volatility": 0.34369999999999995,
           "delta": null,
           "premium": 3.21,
           "moneyness_pct": -0.09138110072689509,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 10.8,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1907,13 +1907,13 @@
           "mid_price": null,
           "volume": 648,
           "open_interest": 5100,
-          "implied_volatility": 0.33520000000000005,
+          "implied_volatility": 0.3404,
           "delta": null,
           "premium": 5.28,
           "moneyness_pct": -0.06542056074766356,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 17.27,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1937,7 +1937,7 @@
           "moneyness_pct": 0.06438213914849422,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 8.61,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1961,7 +1961,7 @@
           "moneyness_pct": 0.03842159916926269,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.24,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -1979,13 +1979,13 @@
           "mid_price": null,
           "volume": 447,
           "open_interest": 4342,
-          "implied_volatility": 0.3577,
+          "implied_volatility": 0.3616,
           "delta": null,
           "premium": 2.1,
           "moneyness_pct": -0.11734164070612663,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 7.27,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2009,7 +2009,7 @@
           "moneyness_pct": 0.11630321910695751,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -15.52,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2033,7 +2033,7 @@
           "moneyness_pct": 0.09034267912772598,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -8.97,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2057,7 +2057,7 @@
           "moneyness_pct": -0.06542056074766356,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 9.8,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2081,7 +2081,7 @@
           "moneyness_pct": -0.14330218068535827,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 4.85,
-          "trade_time": "2026-10-27T08:23:11.922427+00:00",
+          "trade_time": "2026-10-27T08:33:14.168978+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2105,7 +2105,7 @@
           "moneyness_pct": -0.14330218068535827,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 5.74,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2129,7 +2129,7 @@
           "moneyness_pct": 0.012461059190031154,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 12.25,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2153,7 +2153,7 @@
           "moneyness_pct": 0.06438213914849422,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -6.55,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2177,7 +2177,7 @@
           "moneyness_pct": 0.03842159916926269,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 8.8,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2201,7 +2201,7 @@
           "moneyness_pct": -0.14330218068535827,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2225,7 +2225,7 @@
           "moneyness_pct": -0.09138110072689509,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2249,7 +2249,7 @@
           "moneyness_pct": -0.06542056074766356,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 7.6,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2273,7 +2273,7 @@
           "moneyness_pct": -0.039460020768431914,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 14.28,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2297,7 +2297,7 @@
           "moneyness_pct": -0.06542056074766356,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 11.43,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2321,7 +2321,7 @@
           "moneyness_pct": 0.06438213914849422,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 10.91,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2345,7 +2345,7 @@
           "moneyness_pct": -0.11734164070612663,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 7.61,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2369,7 +2369,7 @@
           "moneyness_pct": -0.11734164070612663,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 7.72,
-          "trade_time": "2026-10-27T08:24:16.915926+00:00",
+          "trade_time": "2026-10-27T08:34:15.524612+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2393,7 +2393,7 @@
           "moneyness_pct": 0.012461059190031154,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 10.57,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2417,7 +2417,7 @@
           "moneyness_pct": -0.06542056074766356,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.75,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2435,13 +2435,13 @@
           "mid_price": null,
           "volume": 101,
           "open_interest": 1712,
-          "implied_volatility": 0.37579999999999997,
+          "implied_volatility": 0.40590000000000004,
           "delta": null,
           "premium": 5.5,
           "moneyness_pct": -0.0005192107995846129,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 173.81,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2465,7 +2465,7 @@
           "moneyness_pct": 0.11630321910695751,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 3.47,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2483,13 +2483,13 @@
           "mid_price": null,
           "volume": 183,
           "open_interest": 1611,
-          "implied_volatility": 0.3831,
+          "implied_volatility": 0.4238,
           "delta": null,
           "premium": 8.6,
           "moneyness_pct": 0.012461059190031154,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 118.55,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2513,7 +2513,7 @@
           "moneyness_pct": -0.039460020768431914,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 9.34,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2531,13 +2531,13 @@
           "mid_price": null,
           "volume": 83,
           "open_interest": 1534,
-          "implied_volatility": 0.3128,
+          "implied_volatility": 0.32909999999999995,
           "delta": null,
           "premium": 8.11,
           "moneyness_pct": -0.0005192107995846129,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 76.89,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2561,7 +2561,7 @@
           "moneyness_pct": -0.14330218068535827,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 6.14,
-          "trade_time": "2026-10-27T08:26:24.694822+00:00",
+          "trade_time": "2026-10-27T08:36:32.648190+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2585,7 +2585,7 @@
           "moneyness_pct": 0.14226375908618905,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": 4.48,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2609,7 +2609,7 @@
           "moneyness_pct": -0.14330218068535827,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.55,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2633,7 +2633,7 @@
           "moneyness_pct": -0.14330218068535827,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 6.18,
-          "trade_time": "2026-10-27T08:27:21.780994+00:00",
+          "trade_time": "2026-10-27T08:37:34.289952+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2657,7 +2657,7 @@
           "moneyness_pct": -0.05244029075804779,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 16.0,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2681,7 +2681,7 @@
           "moneyness_pct": -0.11734164070612663,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:20:37.334165+00:00",
+          "trade_time": "2026-10-27T08:30:47.233875+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2705,7 +2705,7 @@
           "moneyness_pct": -0.06542056074766356,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 10.14,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2729,7 +2729,7 @@
           "moneyness_pct": -0.14330218068535827,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2753,7 +2753,7 @@
           "moneyness_pct": -0.11734164070612663,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 6.71,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2771,13 +2771,13 @@
           "mid_price": null,
           "volume": 147,
           "open_interest": 787,
-          "implied_volatility": 0.3754,
+          "implied_volatility": 0.39280000000000004,
           "delta": null,
           "premium": 1.76,
           "moneyness_pct": -0.026479750778816147,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 57.1,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2801,7 +2801,7 @@
           "moneyness_pct": -0.09138110072689509,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 4.17,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2819,13 +2819,13 @@
           "mid_price": null,
           "volume": 85,
           "open_interest": 684,
-          "implied_volatility": 0.4008,
+          "implied_volatility": 0.4157,
           "delta": null,
           "premium": 1.03,
           "moneyness_pct": -0.039460020768431914,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 33.87,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2849,7 +2849,7 @@
           "moneyness_pct": 0.02544132917964692,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": -301.86,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2873,7 +2873,7 @@
           "moneyness_pct": -0.09138110072689509,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 7.8,
-          "trade_time": "2026-10-27T08:28:28.023625+00:00",
+          "trade_time": "2026-10-27T08:38:33.712685+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2897,7 +2897,7 @@
           "moneyness_pct": 0.06438213914849422,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -46.29,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2915,13 +2915,13 @@
           "mid_price": null,
           "volume": 23,
           "open_interest": 523,
-          "implied_volatility": 0.5585,
+          "implied_volatility": 0.6125,
           "delta": null,
           "premium": 18.0,
           "moneyness_pct": 0.03842159916926269,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 97.33,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2945,7 +2945,7 @@
           "moneyness_pct": -0.09138110072689509,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 6.78,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2969,7 +2969,7 @@
           "moneyness_pct": -0.07840083073727933,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.57,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -2993,7 +2993,7 @@
           "moneyness_pct": 0.14226375908618905,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -48.88,
-          "trade_time": "2026-10-27T08:25:18.982937+00:00",
+          "trade_time": "2026-10-27T08:35:25.765633+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3017,7 +3017,7 @@
           "moneyness_pct": -0.10436137071651086,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3035,13 +3035,13 @@
           "mid_price": null,
           "volume": 130,
           "open_interest": 192,
-          "implied_volatility": 0.34149999999999997,
+          "implied_volatility": 0.3496,
           "delta": null,
           "premium": 2.02,
           "moneyness_pct": -0.05244029075804779,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 20.2,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3059,13 +3059,13 @@
           "mid_price": null,
           "volume": 7,
           "open_interest": 177,
-          "implied_volatility": 0.4788,
+          "implied_volatility": 0.5632,
           "delta": null,
           "premium": 21.5,
           "moneyness_pct": 0.051401869158878455,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": 51.07,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3083,13 +3083,13 @@
           "mid_price": null,
           "volume": 203,
           "open_interest": 148,
-          "implied_volatility": 0.3191,
+          "implied_volatility": 0.3285,
           "delta": null,
           "premium": 2.7,
           "moneyness_pct": -0.039460020768431914,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 26.64,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3107,13 +3107,13 @@
           "mid_price": null,
           "volume": 150,
           "open_interest": 132,
-          "implied_volatility": 0.3118,
+          "implied_volatility": 0.32299999999999995,
           "delta": null,
           "premium": 3.94,
           "moneyness_pct": -0.026479750778816147,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 38.35,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3131,13 +3131,13 @@
           "mid_price": null,
           "volume": 91,
           "open_interest": 127,
-          "implied_volatility": 0.3461,
+          "implied_volatility": 0.3531,
           "delta": null,
           "premium": 1.28,
           "moneyness_pct": -0.06542056074766356,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 12.98,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3161,7 +3161,7 @@
           "moneyness_pct": -0.07840083073727933,
           "moneyness_bucket": "-10%~-5%",
           "cash_secured_put_annualized_pct": 8.23,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3185,7 +3185,7 @@
           "moneyness_pct": -0.10436137071651086,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 4.87,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3203,13 +3203,13 @@
           "mid_price": null,
           "volume": 146,
           "open_interest": 71,
-          "implied_volatility": 0.309,
+          "implied_volatility": 0.32270000000000004,
           "delta": null,
           "premium": 5.7,
           "moneyness_pct": -0.01349948078920038,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 54.75,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3233,7 +3233,7 @@
           "moneyness_pct": 0.07736240913811021,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -873.65,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3257,7 +3257,7 @@
           "moneyness_pct": -0.11734164070612663,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3281,7 +3281,7 @@
           "moneyness_pct": -0.14330218068535827,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3305,7 +3305,7 @@
           "moneyness_pct": 0.10332294911734174,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -37.22,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3323,13 +3323,13 @@
           "mid_price": null,
           "volume": 38,
           "open_interest": 26,
-          "implied_volatility": 0.2413,
+          "implied_volatility": 0.2706,
           "delta": null,
           "premium": 12.74,
           "moneyness_pct": 0.02544132917964692,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 27.17,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3347,13 +3347,13 @@
           "mid_price": null,
           "volume": 30,
           "open_interest": 17,
-          "implied_volatility": 0.2327,
+          "implied_volatility": 0.2733,
           "delta": null,
           "premium": 16.61,
           "moneyness_pct": 0.03842159916926269,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 16.52,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3377,7 +3377,7 @@
           "moneyness_pct": 0.11630321910695751,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -1267.6,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3401,7 +3401,7 @@
           "moneyness_pct": -0.1303219106957424,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3425,7 +3425,7 @@
           "moneyness_pct": 0.09034267912772598,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -1008.1,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3449,7 +3449,7 @@
           "moneyness_pct": 0.11630321910695751,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -380.28,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3473,7 +3473,7 @@
           "moneyness_pct": 0.06438213914849422,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -13.35,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3491,13 +3491,13 @@
           "mid_price": null,
           "volume": 47,
           "open_interest": 2,
-          "implied_volatility": 0.3046,
+          "implied_volatility": 0.322,
           "delta": null,
           "premium": 10.72,
           "moneyness_pct": 0.012461059190031154,
           "moneyness_bucket": "-5%~+5%",
           "cash_secured_put_annualized_pct": 55.41,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3521,7 +3521,7 @@
           "moneyness_pct": -0.1303219106957424,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3545,7 +3545,7 @@
           "moneyness_pct": -0.14330218068535827,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3569,7 +3569,7 @@
           "moneyness_pct": -0.11734164070612663,
           "moneyness_bucket": "-20%~-10%",
           "cash_secured_put_annualized_pct": 0.0,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3593,7 +3593,7 @@
           "moneyness_pct": 0.051401869158878455,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -178.44,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3617,7 +3617,7 @@
           "moneyness_pct": 0.07736240913811021,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -262.1,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3641,7 +3641,7 @@
           "moneyness_pct": 0.09034267912772598,
           "moneyness_bucket": "+5%~+10%",
           "cash_secured_put_annualized_pct": -302.43,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3665,7 +3665,7 @@
           "moneyness_pct": 0.10332294911734174,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -341.81,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3689,7 +3689,7 @@
           "moneyness_pct": 0.12928348909657328,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -417.86,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3713,7 +3713,7 @@
           "moneyness_pct": 0.14226375908618905,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -454.59,
-          "trade_time": "2026-10-27T08:22:29.478829+00:00",
+          "trade_time": "2026-10-27T08:32:36.386102+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3737,7 +3737,7 @@
           "moneyness_pct": 0.12928348909657328,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -1392.87,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         },
         {
@@ -3761,7 +3761,7 @@
           "moneyness_pct": 0.14226375908618905,
           "moneyness_bucket": "+10%~+20%",
           "cash_secured_put_annualized_pct": -1515.3,
-          "trade_time": "2026-10-27T08:21:41.392443+00:00",
+          "trade_time": "2026-10-27T08:31:47.607783+00:00",
           "contract_multiplier": 100
         }
       ],
@@ -3806,13 +3806,13 @@
           null,
           784,
           37964,
-          null,
+          0.8745999999999999,
           null,
           35.86,
           0.09034267912772598,
           "+5%~+10%",
           46.06,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -3836,7 +3836,7 @@
           0.03842159916926269,
           "-5%~+5%",
           17.04,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -3860,7 +3860,7 @@
           0.06438213914849422,
           "+5%~+10%",
           8.52,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -3884,7 +3884,7 @@
           0.03842159916926269,
           "-5%~+5%",
           11.29,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -3902,13 +3902,13 @@
           null,
           319,
           24724,
-          null,
+          1.038,
           null,
           45.8,
           0.11630321910695751,
           "+10%~+20%",
           42.44,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -3932,7 +3932,7 @@
           0.11630321910695751,
           "+10%~+20%",
           3.58,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -3956,7 +3956,7 @@
           -0.09138110072689509,
           "-10%~-5%",
           8.74,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -3980,7 +3980,7 @@
           -0.01349948078920038,
           "-5%~+5%",
           23.8,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -3998,13 +3998,13 @@
           null,
           1903,
           18572,
-          0.4861,
+          0.5796,
           null,
           16.51,
           0.03842159916926269,
           "-5%~+5%",
           78.02,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -4028,7 +4028,7 @@
           0.09034267912772598,
           "+5%~+10%",
           5.94,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -4052,7 +4052,7 @@
           0.14226375908618905,
           "+10%~+20%",
           0.91,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -4076,7 +4076,7 @@
           0.06438213914849422,
           "+5%~+10%",
           12.8,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -4100,7 +4100,7 @@
           0.09034267912772598,
           "+5%~+10%",
           9.1,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -4118,13 +4118,13 @@
           null,
           287,
           14901,
-          0.3048,
+          0.317,
           null,
           22.6,
           0.03842159916926269,
           "-5%~+5%",
           22.96,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -4142,13 +4142,13 @@
           null,
           1296,
           13437,
-          0.3081,
+          0.3156,
           null,
           11.3,
           -0.01349948078920038,
           "-5%~+5%",
           35.01,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -4166,13 +4166,13 @@
           null,
           1497,
           12930,
-          0.37070000000000003,
+          0.4207,
           null,
           7.58,
           0.012461059190031154,
           "-5%~+5%",
           130.09,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -4190,13 +4190,13 @@
           null,
           844,
           12828,
-          null,
+          0.6796,
           null,
           25.8,
           0.06438213914849422,
           "+5%~+10%",
           44.51,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -4220,7 +4220,7 @@
           0.09034267912772598,
           "+5%~+10%",
           -12.34,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -4238,13 +4238,13 @@
           null,
           148,
           11509,
-          0.3091,
+          0.32539999999999997,
           null,
           30.05,
           0.06438213914849422,
           "+5%~+10%",
           15.08,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -4268,7 +4268,7 @@
           0.012461059190031154,
           "-5%~+5%",
           23.43,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -4292,7 +4292,7 @@
           -0.09138110072689509,
           "-10%~-5%",
           10.44,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -4310,13 +4310,13 @@
           null,
           271,
           10033,
-          0.3045,
+          0.314,
           null,
           16.3,
           0.012461059190031154,
           "-5%~+5%",
           34.72,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -4340,7 +4340,7 @@
           -0.06542056074766356,
           "-10%~-5%",
           10.97,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -4364,7 +4364,7 @@
           -0.01349948078920038,
           "-5%~+5%",
           14.71,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -4388,7 +4388,7 @@
           0.09034267912772598,
           "+5%~+10%",
           -32.52,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -4412,7 +4412,7 @@
           -0.01349948078920038,
           "-5%~+5%",
           12.86,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -4430,13 +4430,13 @@
           null,
           239,
           7934,
-          0.32,
+          0.32630000000000003,
           null,
           7.77,
           -0.039460020768431914,
           "-5%~+5%",
           24.73,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -4454,13 +4454,13 @@
           null,
           317,
           7753,
-          0.2919,
+          0.3152,
           null,
           37.67,
           0.09034267912772598,
           "+5%~+10%",
           8.05,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -4484,7 +4484,7 @@
           -0.039460020768431914,
           "-5%~+5%",
           18.33,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -4500,15 +4500,15 @@
           0.0,
           0.0,
           null,
-          4022,
+          4180,
           7599,
-          0.36700000000000005,
+          0.3924,
           null,
           2.31,
           -0.01349948078920038,
           "-5%~+5%",
           110.94,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -4532,7 +4532,7 @@
           0.03842159916926269,
           "-5%~+5%",
           14.58,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -4556,7 +4556,7 @@
           0.11630321910695751,
           "+10%~+20%",
           4.74,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -4580,7 +4580,7 @@
           -0.09138110072689509,
           "-10%~-5%",
           9.76,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -4604,7 +4604,7 @@
           -0.039460020768431914,
           "-5%~+5%",
           0.0,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -4628,7 +4628,7 @@
           -0.09138110072689509,
           "-10%~-5%",
           8.43,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -4652,7 +4652,7 @@
           0.012461059190031154,
           "-5%~+5%",
           13.9,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -4676,7 +4676,7 @@
           0.14226375908618905,
           "+10%~+20%",
           4.47,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -4694,13 +4694,13 @@
           null,
           58,
           6703,
-          null,
+          1.0796,
           null,
           55.4,
           0.14226375908618905,
           "+10%~+20%",
           24.89,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -4718,13 +4718,13 @@
           null,
           472,
           6580,
-          0.35240000000000005,
+          0.37310000000000004,
           null,
           2.97,
           -0.01349948078920038,
           "-5%~+5%",
           95.09,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -4748,7 +4748,7 @@
           -0.11734164070612663,
           "-20%~-10%",
           7.34,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -4766,13 +4766,13 @@
           null,
           83,
           6566,
-          0.3577,
+          0.39189999999999997,
           null,
           57.0,
           0.14226375908618905,
           "+10%~+20%",
           5.89,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -4790,13 +4790,13 @@
           null,
           47,
           6488,
-          0.3179,
+          0.3477,
           null,
           47.1,
           0.11630321910695751,
           "+10%~+20%",
           6.3,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -4820,7 +4820,7 @@
           -0.039460020768431914,
           "-5%~+5%",
           12.89,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -4844,7 +4844,7 @@
           -0.06542056074766356,
           "-10%~-5%",
           13.91,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -4868,7 +4868,7 @@
           -0.01349948078920038,
           "-5%~+5%",
           19.61,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -4886,13 +4886,13 @@
           null,
           1075,
           6028,
-          0.4143,
+          null,
           null,
           0.59,
           -0.039460020768431914,
           "-5%~+5%",
           29.1,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -4916,7 +4916,7 @@
           0.11630321910695751,
           "+10%~+20%",
           -11.28,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -4940,7 +4940,7 @@
           -0.11734164070612663,
           "-20%~-10%",
           7.46,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -4964,7 +4964,7 @@
           0.14226375908618905,
           "+10%~+20%",
           -18.55,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -4988,7 +4988,7 @@
           -0.01349948078920038,
           "-5%~+5%",
           10.65,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -5004,7 +5004,7 @@
           0.0,
           0.0,
           null,
-          690,
+          2940,
           5234,
           0.29309999999999997,
           null,
@@ -5012,7 +5012,7 @@
           0.012461059190031154,
           "-5%~+5%",
           19.25,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -5030,13 +5030,13 @@
           null,
           512,
           5202,
-          0.3392,
+          0.34369999999999995,
           null,
           3.21,
           -0.09138110072689509,
           "-10%~-5%",
           10.8,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -5054,13 +5054,13 @@
           null,
           648,
           5100,
-          0.33520000000000005,
+          0.3404,
           null,
           5.28,
           -0.06542056074766356,
           "-10%~-5%",
           17.27,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -5084,7 +5084,7 @@
           0.06438213914849422,
           "+5%~+10%",
           8.61,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -5108,7 +5108,7 @@
           0.03842159916926269,
           "-5%~+5%",
           10.24,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -5126,13 +5126,13 @@
           null,
           447,
           4342,
-          0.3577,
+          0.3616,
           null,
           2.1,
           -0.11734164070612663,
           "-20%~-10%",
           7.27,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -5156,7 +5156,7 @@
           0.11630321910695751,
           "+10%~+20%",
           -15.52,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -5180,7 +5180,7 @@
           0.09034267912772598,
           "+5%~+10%",
           -8.97,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -5204,7 +5204,7 @@
           -0.06542056074766356,
           "-10%~-5%",
           9.8,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -5228,7 +5228,7 @@
           -0.14330218068535827,
           "-20%~-10%",
           4.85,
-          "2026-10-27T08:23:11.922427+00:00",
+          "2026-10-27T08:33:14.168978+00:00",
           100
         ],
         [
@@ -5252,7 +5252,7 @@
           -0.14330218068535827,
           "-20%~-10%",
           5.74,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -5276,7 +5276,7 @@
           0.012461059190031154,
           "-5%~+5%",
           12.25,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -5300,7 +5300,7 @@
           0.06438213914849422,
           "+5%~+10%",
           -6.55,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -5324,7 +5324,7 @@
           0.03842159916926269,
           "-5%~+5%",
           8.8,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -5348,7 +5348,7 @@
           -0.14330218068535827,
           "-20%~-10%",
           0.0,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -5372,7 +5372,7 @@
           -0.09138110072689509,
           "-10%~-5%",
           0.0,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -5396,7 +5396,7 @@
           -0.06542056074766356,
           "-10%~-5%",
           7.6,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -5420,7 +5420,7 @@
           -0.039460020768431914,
           "-5%~+5%",
           14.28,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -5444,7 +5444,7 @@
           -0.06542056074766356,
           "-10%~-5%",
           11.43,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -5468,7 +5468,7 @@
           0.06438213914849422,
           "+5%~+10%",
           10.91,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -5492,7 +5492,7 @@
           -0.11734164070612663,
           "-20%~-10%",
           7.61,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -5516,7 +5516,7 @@
           -0.11734164070612663,
           "-20%~-10%",
           7.72,
-          "2026-10-27T08:24:16.915926+00:00",
+          "2026-10-27T08:34:15.524612+00:00",
           100
         ],
         [
@@ -5540,7 +5540,7 @@
           0.012461059190031154,
           "-5%~+5%",
           10.57,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -5564,7 +5564,7 @@
           -0.06542056074766356,
           "-10%~-5%",
           8.75,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -5582,13 +5582,13 @@
           null,
           101,
           1712,
-          0.37579999999999997,
+          0.40590000000000004,
           null,
           5.5,
           -0.0005192107995846129,
           "-5%~+5%",
           173.81,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -5612,7 +5612,7 @@
           0.11630321910695751,
           "+10%~+20%",
           3.47,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -5630,13 +5630,13 @@
           null,
           183,
           1611,
-          0.3831,
+          0.4238,
           null,
           8.6,
           0.012461059190031154,
           "-5%~+5%",
           118.55,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -5660,7 +5660,7 @@
           -0.039460020768431914,
           "-5%~+5%",
           9.34,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -5678,13 +5678,13 @@
           null,
           83,
           1534,
-          0.3128,
+          0.32909999999999995,
           null,
           8.11,
           -0.0005192107995846129,
           "-5%~+5%",
           76.89,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -5708,7 +5708,7 @@
           -0.14330218068535827,
           "-20%~-10%",
           6.14,
-          "2026-10-27T08:26:24.694822+00:00",
+          "2026-10-27T08:36:32.648190+00:00",
           100
         ],
         [
@@ -5732,7 +5732,7 @@
           0.14226375908618905,
           "+10%~+20%",
           4.48,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -5756,7 +5756,7 @@
           -0.14330218068535827,
           "-20%~-10%",
           0.55,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -5780,7 +5780,7 @@
           -0.14330218068535827,
           "-20%~-10%",
           6.18,
-          "2026-10-27T08:27:21.780994+00:00",
+          "2026-10-27T08:37:34.289952+00:00",
           100
         ],
         [
@@ -5804,7 +5804,7 @@
           -0.05244029075804779,
           "-10%~-5%",
           16.0,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -5828,7 +5828,7 @@
           -0.11734164070612663,
           "-20%~-10%",
           0.0,
-          "2026-10-27T08:20:37.334165+00:00",
+          "2026-10-27T08:30:47.233875+00:00",
           100
         ],
         [
@@ -5852,7 +5852,7 @@
           -0.06542056074766356,
           "-10%~-5%",
           10.14,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -5876,7 +5876,7 @@
           -0.14330218068535827,
           "-20%~-10%",
           0.0,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -5900,7 +5900,7 @@
           -0.11734164070612663,
           "-20%~-10%",
           6.71,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -5918,13 +5918,13 @@
           null,
           147,
           787,
-          0.3754,
+          0.39280000000000004,
           null,
           1.76,
           -0.026479750778816147,
           "-5%~+5%",
           57.1,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -5948,7 +5948,7 @@
           -0.09138110072689509,
           "-10%~-5%",
           4.17,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -5966,13 +5966,13 @@
           null,
           85,
           684,
-          0.4008,
+          0.4157,
           null,
           1.03,
           -0.039460020768431914,
           "-5%~+5%",
           33.87,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -5996,7 +5996,7 @@
           0.02544132917964692,
           "-5%~+5%",
           -301.86,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6020,7 +6020,7 @@
           -0.09138110072689509,
           "-10%~-5%",
           7.8,
-          "2026-10-27T08:28:28.023625+00:00",
+          "2026-10-27T08:38:33.712685+00:00",
           100
         ],
         [
@@ -6044,7 +6044,7 @@
           0.06438213914849422,
           "+5%~+10%",
           -46.29,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6062,13 +6062,13 @@
           null,
           23,
           523,
-          0.5585,
+          0.6125,
           null,
           18.0,
           0.03842159916926269,
           "-5%~+5%",
           97.33,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6092,7 +6092,7 @@
           -0.09138110072689509,
           "-10%~-5%",
           6.78,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6116,7 +6116,7 @@
           -0.07840083073727933,
           "-10%~-5%",
           8.57,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6140,7 +6140,7 @@
           0.14226375908618905,
           "+10%~+20%",
           -48.88,
-          "2026-10-27T08:25:18.982937+00:00",
+          "2026-10-27T08:35:25.765633+00:00",
           100
         ],
         [
@@ -6164,7 +6164,7 @@
           -0.10436137071651086,
           "-20%~-10%",
           0.0,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6182,13 +6182,13 @@
           null,
           130,
           192,
-          0.34149999999999997,
+          0.3496,
           null,
           2.02,
           -0.05244029075804779,
           "-10%~-5%",
           20.2,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6206,13 +6206,13 @@
           null,
           7,
           177,
-          0.4788,
+          0.5632,
           null,
           21.5,
           0.051401869158878455,
           "+5%~+10%",
           51.07,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6230,13 +6230,13 @@
           null,
           203,
           148,
-          0.3191,
+          0.3285,
           null,
           2.7,
           -0.039460020768431914,
           "-5%~+5%",
           26.64,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6254,13 +6254,13 @@
           null,
           150,
           132,
-          0.3118,
+          0.32299999999999995,
           null,
           3.94,
           -0.026479750778816147,
           "-5%~+5%",
           38.35,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6278,13 +6278,13 @@
           null,
           91,
           127,
-          0.3461,
+          0.3531,
           null,
           1.28,
           -0.06542056074766356,
           "-10%~-5%",
           12.98,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6308,7 +6308,7 @@
           -0.07840083073727933,
           "-10%~-5%",
           8.23,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6332,7 +6332,7 @@
           -0.10436137071651086,
           "-20%~-10%",
           4.87,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6350,13 +6350,13 @@
           null,
           146,
           71,
-          0.309,
+          0.32270000000000004,
           null,
           5.7,
           -0.01349948078920038,
           "-5%~+5%",
           54.75,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6380,7 +6380,7 @@
           0.07736240913811021,
           "+5%~+10%",
           -873.65,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6404,7 +6404,7 @@
           -0.11734164070612663,
           "-20%~-10%",
           0.0,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6428,7 +6428,7 @@
           -0.14330218068535827,
           "-20%~-10%",
           0.0,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6452,7 +6452,7 @@
           0.10332294911734174,
           "+10%~+20%",
           -37.22,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6470,13 +6470,13 @@
           null,
           38,
           26,
-          0.2413,
+          0.2706,
           null,
           12.74,
           0.02544132917964692,
           "-5%~+5%",
           27.17,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6494,13 +6494,13 @@
           null,
           30,
           17,
-          0.2327,
+          0.2733,
           null,
           16.61,
           0.03842159916926269,
           "-5%~+5%",
           16.52,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6524,7 +6524,7 @@
           0.11630321910695751,
           "+10%~+20%",
           -1267.6,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6548,7 +6548,7 @@
           -0.1303219106957424,
           "-20%~-10%",
           0.0,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6572,7 +6572,7 @@
           0.09034267912772598,
           "+5%~+10%",
           -1008.1,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6596,7 +6596,7 @@
           0.11630321910695751,
           "+10%~+20%",
           -380.28,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6620,7 +6620,7 @@
           0.06438213914849422,
           "+5%~+10%",
           -13.35,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6638,13 +6638,13 @@
           null,
           47,
           2,
-          0.3046,
+          0.322,
           null,
           10.72,
           0.012461059190031154,
           "-5%~+5%",
           55.41,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6668,7 +6668,7 @@
           -0.1303219106957424,
           "-20%~-10%",
           0.0,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6692,7 +6692,7 @@
           -0.14330218068535827,
           "-20%~-10%",
           0.0,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6716,7 +6716,7 @@
           -0.11734164070612663,
           "-20%~-10%",
           0.0,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6740,7 +6740,7 @@
           0.051401869158878455,
           "+5%~+10%",
           -178.44,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6764,7 +6764,7 @@
           0.07736240913811021,
           "+5%~+10%",
           -262.1,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6788,7 +6788,7 @@
           0.09034267912772598,
           "+5%~+10%",
           -302.43,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6812,7 +6812,7 @@
           0.10332294911734174,
           "+10%~+20%",
           -341.81,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6836,7 +6836,7 @@
           0.12928348909657328,
           "+10%~+20%",
           -417.86,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6860,7 +6860,7 @@
           0.14226375908618905,
           "+10%~+20%",
           -454.59,
-          "2026-10-27T08:22:29.478829+00:00",
+          "2026-10-27T08:32:36.386102+00:00",
           100
         ],
         [
@@ -6884,7 +6884,7 @@
           0.12928348909657328,
           "+10%~+20%",
           -1392.87,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ],
         [
@@ -6908,7 +6908,7 @@
           0.14226375908618905,
           "+10%~+20%",
           -1515.3,
-          "2026-10-27T08:21:41.392443+00:00",
+          "2026-10-27T08:31:47.607783+00:00",
           100
         ]
       ]
